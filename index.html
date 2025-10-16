@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEANNE Arthur - Portfolio BTS SIO SLAM 2026</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio de JEANNE Arthur, étudiant en BTS SIO SLAM option Solutions Logicielles et Applications Métiers - Promotion 2026. Découvrez mes projets de développement web, automatisation et gestion de patrimoine informatique.">
+    <meta name="keywords" content="BTS SIO, SLAM, portfolio, développement web, Python, JavaScript, React, alternance, informatique, programmation">
+    <meta name="author" content="JEANNE Arthur">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://votre-portfolio.com/">
+    <meta property="og:title" content="JEANNE Arthur - Portfolio BTS SIO SLAM 2026">
+    <meta property="og:description" content="Portfolio professionnel présentant mes compétences en développement logiciel, automatisation et gestion de projets informatiques.">
+    <meta property="og:image" content="https://votre-portfolio.com/preview.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://votre-portfolio.com/">
+    <meta property="twitter:title" content="JEANNE Arthur - Portfolio BTS SIO SLAM 2026">
+    <meta property="twitter:description" content="Portfolio professionnel présentant mes compétences en développement logiciel, automatisation et gestion de projets informatiques.">
+    <meta property="twitter:image" content="https://votre-portfolio.com/preview.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Portfolio BTS SIO</div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#accueil" class="nav-link active">Accueil</a></li>
+                <li><a href="#presentation" class="nav-link">Présentation</a></li>
+                <li><a href="#competences-synthese" class="nav-link">Tableau E4/E5</a></li>
+                <li><a href="#projets" class="nav-link">Projets</a></li>
+                <li><a href="#competences" class="nav-link">Compétences</a></li>
+                <li><a href="#veille" class="nav-link">Veille</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting">Hello ! Je suis <span style="color: var(--primary-purple-light);">Arthur Jeanne</span></p>
+                <h1 class="hero-title">
+                    Un développeur qui<br>
+                    aime créer des <span class="highlight">solutions</span>
+                </h1>
+                <h2 class="hero-subtitle">Étudiant BTS SIO SLAM - Promotion 2026</h2>
+                <p class="hero-description">
+                    Passionné par le développement web et la cybersécurité, je conçois des applications modernes et sécurisées.
+                    Actuellement en alternance chez Crispin Industrie, je travaille sur des projets full-stack innovants.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projets" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> Voir mes projets
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i> Me contacter
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-avatar">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Présentation Générale -->
+    <section id="presentation" class="section">
+        <div class="container">
+            <h2 class="section-title">Présentation Générale</h2>
+            <div class="presentation-grid">
+                <div class="presentation-card">
+                    <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Formation</h3>
+                    <h4>BTS SIO Option SLAM</h4>
+                    <p><strong>Établissement :</strong> ESNA</p>
+                    <p><strong>Période :</strong> 2024 - 2026</p>
+                    <p><strong>Spécialisation :</strong> Solutions Logicielles et Applications Métiers</p>
+                    <p class="description">
+                        Formation orientée développement logiciel, conception d'applications, bases de données,
+                        gestion de projets informatiques et cybersécurité.
+                    </p>
+                </div>
+
+                <div class="presentation-card">
+                    <div class="card-icon"><i class="fas fa-building"></i></div>
+                    <h3>Alternance</h3>
+                    <h4>Crispin Industrie</h4>
+                    <p><strong>Poste :</strong> Développeur web en alternance</p>
+                    <p><strong>Période :</strong> Septembre 2024 - Juillet 2026</p>
+                    <p><strong>Secteur :</strong> Manufacture de luxe</p>
+                    <p class="description">
+                        Participation active au développement d'un site e-commerce et réaliser de site vitrine. 
+                    </p>
+                </div>
+
+                <div class="presentation-card full-width">
+                    <div class="card-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3>Objectifs de Formation</h3>
+                    <div class="objectives-grid">
+                        <div class="objective">
+                            <i class="fas fa-code"></i>
+                            <p>Maîtriser le développement web et logiciel (Frontend & Backend)</p>
+                        </div>
+                        <div class="objective">
+                            <i class="fas fa-database"></i>
+                            <p>Concevoir et administrer des bases de données relationnelles</p>
+                        </div>
+                        <div class="objective">
+                            <i class="fas fa-shield-alt"></i>
+                            <p>Intégrer les bonnes pratiques de cybersécurité</p>
+                        </div>
+                        <div class="objective">
+                            <i class="fas fa-project-diagram"></i>
+                            <p>Gérer des projets en méthodes agiles (Scrum, Kanban)</p>
+                        </div>
+                        <div class="objective">
+                            <i class="fas fa-cogs"></i>
+                            <p>Automatiser des processus métier et déploiements</p>
+                        </div>
+                        <div class="objective">
+                            <i class="fas fa-users"></i>
+                            <p>Développer des compétences en travail collaboratif</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tableau de Synthèse E4/E5 -->
+    <section id="competences-synthese" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Tableau de Synthèse des Compétences E4/E5</h2>
+            <p class="section-intro">
+                Mise en correspondance des compétences du référentiel BTS SIO 2026 avec les projets réalisés
+            </p>
+
+            <div class="table-wrapper">
+                <table class="competences-table">
+                    <thead>
+                        <tr>
+                            <th>Bloc</th>
+                            <th>Compétence</th>
+                            <th>Description</th>
+                            <th>Projets associés</th>
+                            <th>Niveau</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- E4 - Conception et développement -->
+                        <tr>
+                            <td rowspan="6" class="bloc-cell">E4<br>Conception &<br>Développement</td>
+                            <td><strong>C1.1</strong></td>
+                            <td>Analyser un besoin exprimé</td>
+                            <td>
+                                <span class="project-tag">Linkedln</span>
+                                <span class="project-tag">Satelix</span>
+                            </td>
+                            <td><span class="level level-3">Maîtrisé</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>C1.2</strong></td>
+                            <td>Concevoir une solution applicative</td>
+                            <td>
+                                <span class="project-tag">Linkedln</span>
+                                <span class="project-tag">Baticeram</span>
+                            </td>
+                            <td><span class="level level-3">Maîtrisé</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>C1.3</strong></td>
+                            <td>Développer des composants logiciels</td>
+                            <td>
+                                <span class="project-tag">Linkedln</span>
+                                <span class="project-tag">Satelix</span>
+                                <span class="project-tag">Baticeram</span>
+                            </td>
+                            <td><span class="level level-4">Expert</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>C1.4</strong></td>
+                            <td>Réaliser des tests et valider</td>
+                            <td>
+                                <span class="project-tag">Linkedln</span>
+                                <span class="project-tag">Satelix</span>
+                            </td>
+                            <td><span class="level level-3">Maîtrisé</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>C1.5</strong></td>
+                            <td>Gérer les données</td>
+                            <td>
+                                <span class="project-tag">Linkedln</span>
+                                <span class="project-tag">Satelix</span>
+                            </td>
+                            <td><span class="level level-3">Maîtrisé</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>C1.6</strong></td>
+                            <td>Déployer une solution applicative</td>
+                            <td>
+                                <span class="project-tag">Baticeram</span>
+                                <span class="project-tag">Satelix</span>
+                            </td>
+                            <td><span class="level level-3">Maîtrisé</span></td>
+                        </tr>
+
+                        <!-- E5 - Gestion du patrimoine informatique -->
+                        <tr>
+                            <td rowspan="5" class="bloc-cell">E5<br>Gestion du<br>Patrimoine</td>
+                            <td><strong>C2.1</strong></td>
+                            <td>Gérer le patrimoine informatique</td>
+                            <td>
+                                <span class="project-tag">Satelix</span>
+                            </td>
+                            <td><span class="level level-3">Maîtrisé</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>C2.2</strong></td>
+                            <td>Répondre aux incidents et demandes</td>
+                            <td>
+                                <span class="project-tag">Satelix</span>
+                            </td>
+                            <td><span class="level level-3">Maîtrisé</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>C2.3</strong></td>
+                            <td>Développer la présence en ligne</td>
+                            <td>
+                                <span class="project-tag">Baticeram</span>
+                                <span class="project-tag">Linkedln</span>
+                            </td>
+                            <td><span class="level level-4">Expert</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>C2.4</strong></td>
+                            <td>Travailler en mode projet</td>
+                            <td>
+                                <span class="project-tag">Linkedln</span>
+                                <span class="project-tag">Satelix</span>
+                                <span class="project-tag">Baticeram</span>
+                            </td>
+                            <td><span class="level level-3">Maîtrisé</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>C2.5</strong></td>
+                            <td>Mettre à disposition des utilisateurs</td>
+                            <td>
+                                <span class="project-tag">Satelix</span>
+                                <span class="project-tag">Baticeram</span>
+                            </td>
+                            <td><span class="level level-3">Maîtrisé</span></td>
+                        </tr>
+
+                        <!-- Cybersécurité -->
+                        <tr>
+                            <td rowspan="3" class="bloc-cell">Cyber-<br>sécurité</td>
+                            <td><strong>C3.1</strong></td>
+                            <td>Protéger les données</td>
+                            <td>
+                                <span class="project-tag">Linkedln</span>
+                                <span class="project-tag">Satelix</span>
+                            </td>
+                            <td><span class="level level-3">Maîtrisé</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>C3.2</strong></td>
+                            <td>Préserver l'identité numérique</td>
+                            <td>
+                                <span class="project-tag">Linkedln</span>
+                            </td>
+                            <td><span class="level level-2">Acquis</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>C3.3</strong></td>
+                            <td>Sécuriser les équipements et usages</td>
+                            <td>
+                                <span class="project-tag">Satelix</span>
+                            </td>
+                            <td><span class="level level-3">Maîtrisé</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="legend">
+                <h4>Légende des niveaux de compétence :</h4>
+                <div class="legend-items">
+                    <div class="legend-item">
+                        <span class="level level-1">Découvert</span>
+                        <p>Sensibilisation et première approche</p>
+                    </div>
+                    <div class="legend-item">
+                        <span class="level level-2">Acquis</span>
+                        <p>Compétence appliquée avec assistance</p>
+                    </div>
+                    <div class="legend-item">
+                        <span class="level level-3">Maîtrisé</span>
+                        <p>Autonomie dans l'application</p>
+                    </div>
+                    <div class="legend-item">
+                        <span class="level level-4">Expert</span>
+                        <p>Maîtrise approfondie et transmission possible</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projets -->
+    <section id="projets" class="section">
+        <div class="container">
+            <h2 class="section-title">Projets Réalisés</h2>
+            <p class="section-intro">Découvrez les projets majeurs réalisés durant ma formation</p>
+
+            <div class="projects-grid">
+                <!-- Projet Linkedln -->
+                <div class="project-card" data-project="linkedln">
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fas fa-users-cog"></i></div>
+                        <h3>Linkedln</h3>
+                        <p class="project-type">Plateforme de mise en relation</p>
+                    </div>
+                    <p class="project-summary">
+                        Plateforme web de mise en relation entre alternants et entreprises, facilitant la recherche d'opportunités professionnelles.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">En développement</span>
+                        <span class="tech-tag">Web App</span>
+                        <span class="tech-tag">Full Stack</span>
+                    </div>
+                    <a href="projet-linkedln.html" class="btn-secondary">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Projet Satelix -->
+                <div class="project-card" data-project="satelix">
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fas fa-robot"></i></div>
+                        <h3>Satelix</h3>
+                        <p class="project-type">Automatisation d'inventaires</p>
+                    </div>
+                    <p class="project-summary">
+                        Suite d'automatisation pour la création d'inventaires Satelix et Sage100, avec planification quotidienne et interface moderne.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Automation</span>
+                        <span class="tech-tag">Batch</span>
+                    </div>
+                    <a href="projet-satelix.html" class="btn-secondary">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Projet Baticeram -->
+                <div class="project-card" data-project="baticeram">
+                    <div class="project-header">
+                        <div class="project-icon"><i class="fas fa-globe"></i></div>
+                        <h3>Baticeram</h3>
+                        <p class="project-type">Site vitrine entreprise</p>
+                    </div>
+                    <p class="project-summary">
+                        Site vitrine professionnel pour une entreprise de chapes liquides et isolation, avec design responsive et animations.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML/CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Responsive</span>
+                    </div>
+                    <a href="projet-baticeram.html" class="btn-secondary">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compétences Techniques -->
+    <section id="competences" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Compétences Techniques</h2>
+
+            <div class="skills-grid">
+                <!-- Frontend -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-palette"></i> Frontend</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">HTML5 / CSS3</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript (ES6+)</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Responsive Design</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">React (en cours)</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-server"></i> Backend</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">PHP</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Node.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">API REST</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bases de données -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Bases de données</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">MySQL / MariaDB</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">PostgreSQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">SQL avancé</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Modélisation (MCD/MLD)</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DevOps & Outils -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> DevOps & Outils</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Git / GitHub</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Docker</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">CI/CD</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Linux / Bash</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cybersécurité -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-shield-alt"></i> Cybersécurité</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">OWASP Top 10</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Chiffrement des données</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Authentification sécurisée</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Tests de sécurité</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gestion de projet -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-tasks"></i> Gestion de projet</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Méthodes Agiles (Scrum)</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">UML (Diagrammes)</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Documentation technique</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Jira / Trello</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Veille Technologique -->
+    <section id="veille" class="section">
+        <div class="container">
+            <h2 class="section-title">Veille Technologique et Sécurité</h2>
+            <p class="section-intro">
+                Suivi régulier des évolutions technologiques et des enjeux de cybersécurité
+            </p>
+
+            <div class="veille-grid">
+                <!-- Article principal -->
+                <article class="veille-main">
+                    <div class="veille-header">
+                        <span class="veille-category">Cybersécurité</span>
+                        <span class="veille-date">Janvier 2025</span>
+                    </div>
+                    <h3>L'authentification sans mot de passe : enjeux et mise en œuvre</h3>
+
+                    <div class="veille-content">
+                        <h4>Contexte et problématique</h4>
+                        <p>
+                            Les mots de passe restent le maillon faible de la sécurité informatique : 81% des violations de données
+                            sont liées à des mots de passe faibles ou volés (rapport Verizon 2024). L'authentification sans mot de
+                            passe (passwordless) émerge comme une alternative prometteuse, notamment via les standards WebAuthn et FIDO2.
+                        </p>
+
+                        <h4>Technologies et standards</h4>
+                        <ul>
+                            <li><strong>WebAuthn (Web Authentication API)</strong> : Standard W3C permettant l'authentification
+                            par biométrie ou clés de sécurité physiques</li>
+                            <li><strong>FIDO2</strong> : Alliance de protocoles (CTAP + WebAuthn) pour une authentification forte
+                            sans mot de passe</li>
+                            <li><strong>Passkeys</strong> : Implémentation grand public proposée par Apple, Google et Microsoft,
+                            synchronisée entre appareils</li>
+                        </ul>
+
+                        <h4>Avantages pour la sécurité</h4>
+                        <ul>
+                            <li>Élimination des risques de phishing et de vol de mots de passe</li>
+                            <li>Protection contre les attaques par force brute</li>
+                            <li>Authentification forte native (multi-facteurs intégré)</li>
+                            <li>Réduction de la surface d'attaque (pas de stockage de secrets côté serveur)</li>
+                        </ul>
+
+                        <h4>Mise en pratique</h4>
+                        <p>
+                            Dans le cadre du projet <strong>Linkedln</strong>, l'intégration de WebAuthn serait pertinente pour
+                            sécuriser l'accès des entreprises et alternants. Voici un exemple d'implémentation :
+                        </p>
+
+                        <div class="code-example">
+                            <code>
+// Enregistrement d'un passkey (côté client)<br>
+const credential = await navigator.credentials.create({<br>
+&nbsp;&nbsp;publicKey: {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;challenge: serverChallenge,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;rp: { name: "Linkedln" },<br>
+&nbsp;&nbsp;&nbsp;&nbsp;user: {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id: userId,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name: userEmail,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;displayName: userName<br>
+&nbsp;&nbsp;&nbsp;&nbsp;},<br>
+&nbsp;&nbsp;&nbsp;&nbsp;authenticatorSelection: {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;userVerification: "required"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;}<br>
+});
+                            </code>
+                        </div>
+
+                        <h4>Défis et limites</h4>
+                        <ul>
+                            <li>Adoption progressive nécessaire (coexistence avec mots de passe)</li>
+                            <li>Compatibilité navigateurs et appareils à vérifier</li>
+                            <li>Formation des utilisateurs aux nouveaux processus</li>
+                            <li>Gestion des cas de perte d'appareil (mécanismes de récupération)</li>
+                        </ul>
+
+                        <h4>Sources et ressources</h4>
+                        <ul class="veille-sources">
+                            <li><a href="https://webauthn.io/" target="_blank">webauthn.io - Guide et démo</a></li>
+                            <li><a href="https://fidoalliance.org/" target="_blank">FIDO Alliance - Documentation officielle</a></li>
+                            <li><a href="https://developer.mozilla.org/fr/docs/Web/API/Web_Authentication_API" target="_blank">MDN - Web Authentication API</a></li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Articles secondaires -->
+                <aside class="veille-sidebar">
+                    <h3>Autres sujets suivis</h3>
+
+                    <div class="veille-card">
+                        <span class="veille-category">Développement</span>
+                        <h4>Python 3.13 et performances</h4>
+                        <p>Nouveautés du compilateur JIT et gains de performance pour l'automatisation (pertinent pour Satelix).</p>
+                        <span class="veille-date">Décembre 2024</span>
+                    </div>
+
+                    <div class="veille-card">
+                        <span class="veille-category">DevOps</span>
+                        <h4>GitHub Actions avancées</h4>
+                        <p>CI/CD optimisée pour le déploiement automatique de sites statiques (appliqué sur Baticeram).</p>
+                        <span class="veille-date">Novembre 2024</span>
+                    </div>
+
+                    <div class="veille-card">
+                        <span class="veille-category">Cybersécurité</span>
+                        <h4>OWASP Top 10 2025</h4>
+                        <p>Nouvelles vulnérabilités identifiées, focus sur les API et l'injection de prompts IA.</p>
+                        <span class="veille-date">Janvier 2025</span>
+                    </div>
+
+                    <div class="veille-card">
+                        <span class="veille-category">Base de données</span>
+                        <h4>PostgreSQL vs MySQL 2025</h4>
+                        <p>Comparatif de performances et fonctionnalités pour le choix de SGBD dans les projets web.</p>
+                        <span class="veille-date">Octobre 2024</span>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Contact & Téléchargement</h2>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Informations de contact</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email</strong>
+                            <p><a href="mailto:arthuralternance.pro@gmail.com">arthuralternance.pro@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>Téléphone</strong>
+                            <p><a href="tel:+33633389076">06 33 38 90 76</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <strong>GitHub</strong>
+                            <p><a href="https://github.com/degdamentals" target="_blank">github.com/degdamentals</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <strong>LinkedIn</strong>
+                            <p><a href="https://www.linkedin.com/in/arthur-jeanne-286560230/" target="_blank">linkedin.com/in/arthur-jeanne-286560230</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="download-section">
+                    <h3>Télécharger le portfolio</h3>
+                    <p>Version PDF à destination du jury BTS SIO 2026</p>
+                    <button id="downloadPDF" class="btn-primary btn-large">
+                        <i class="fas fa-file-pdf"></i> Télécharger en PDF
+                    </button>
+                    <p class="download-note">
+                        Format A4, optimisé pour impression<br>
+                        Inclut tous les projets et compétences
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Portfolio BTS SIO SLAM - Promotion 2026</p>
+            <p>Conçu pour les épreuves E4 et E5 du BTS Services Informatiques aux Organisations</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

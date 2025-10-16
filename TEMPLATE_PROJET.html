@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet [NOM] - Portfolio BTS SIO</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="projet-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Portfolio BTS SIO</div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#accueil" class="nav-link">Accueil</a></li>
+                <li><a href="index.html#presentation" class="nav-link">Présentation</a></li>
+                <li><a href="index.html#competences-synthese" class="nav-link">Tableau E4/E5</a></li>
+                <li><a href="index.html#projets" class="nav-link active">Projets</a></li>
+                <li><a href="index.html#competences" class="nav-link">Compétences</a></li>
+                <li><a href="index.html#veille" class="nav-link">Veille</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="container">
+            <a href="index.html#projets" class="back-link"><i class="fas fa-arrow-left"></i> Retour aux projets</a>
+            <div class="project-hero-content">
+                <div class="project-hero-icon">
+                    <i class="fas fa-code"></i> <!-- Changer l'icône -->
+                </div>
+                <h1>[NOM DU PROJET]</h1>
+                <p class="project-hero-subtitle">[Description courte en une ligne]</p>
+                <div class="project-meta">
+                    <span><i class="fas fa-calendar"></i> [Dates du projet]</span>
+                    <span><i class="fas fa-briefcase"></i> [Type : Scolaire/Alternance/Personnel]</span>
+                    <span><i class="fas fa-check-circle"></i> [Statut : En cours/Terminé]</span>
+                </div>
+                <div class="project-links">
+                    <a href="[URL_GITHUB]" target="_blank" class="btn-primary">
+                        <i class="fab fa-github"></i> Voir sur GitHub
+                    </a>
+                    <!-- Si démo en ligne : -->
+                    <!-- <a href="[URL_DEMO]" target="_blank" class="btn-secondary">
+                        <i class="fas fa-external-link-alt"></i> Voir la démo
+                    </a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contexte et Objectifs -->
+    <section class="section">
+        <div class="container">
+            <div class="project-content">
+                <div class="content-block">
+                    <h2><i class="fas fa-bullseye"></i> Contexte et Objectifs</h2>
+                    <div class="content-text">
+                        <h3>Contexte du projet</h3>
+                        <p>
+                            [Expliquer le contexte : pourquoi ce projet a été créé, quel problème il résout,
+                            pour qui il est destiné, etc.]
+                        </p>
+
+                        <h3>Objectifs principaux</h3>
+                        <ul class="objectives-list">
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>[Objectif 1]</strong> : Description détaillée
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>[Objectif 2]</strong> : Description détaillée
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>[Objectif 3]</strong> : Description détaillée
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Environnement Technique -->
+                <div class="content-block">
+                    <h2><i class="fas fa-cogs"></i> Environnement Technique</h2>
+
+                    <div class="tech-grid">
+                        <div class="tech-category">
+                            <h3><i class="fas fa-code"></i> [Catégorie 1]</h3>
+                            <ul class="tech-list">
+                                <li><span class="tech-badge">[Techno 1]</span> Description</li>
+                                <li><span class="tech-badge">[Techno 2]</span> Description</li>
+                            </ul>
+                        </div>
+
+                        <div class="tech-category">
+                            <h3><i class="fas fa-server"></i> [Catégorie 2]</h3>
+                            <ul class="tech-list">
+                                <li><span class="tech-badge">[Techno 3]</span> Description</li>
+                                <li><span class="tech-badge">[Techno 4]</span> Description</li>
+                            </ul>
+                        </div>
+
+                        <div class="tech-category">
+                            <h3><i class="fas fa-database"></i> [Catégorie 3]</h3>
+                            <ul class="tech-list">
+                                <li><span class="tech-badge">[Techno 5]</span> Description</li>
+                            </ul>
+                        </div>
+
+                        <div class="tech-category">
+                            <h3><i class="fas fa-tools"></i> Outils</h3>
+                            <ul class="tech-list">
+                                <li><span class="tech-badge">Git / GitHub</span> Gestion de version</li>
+                                <li><span class="tech-badge">[Autre outil]</span> Description</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fonctionnalités -->
+                <div class="content-block">
+                    <h2><i class="fas fa-list-check"></i> Fonctionnalités Principales</h2>
+
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-star"></i></div>
+                            <h3>[Fonctionnalité 1]</h3>
+                            <ul>
+                                <li>Point 1</li>
+                                <li>Point 2</li>
+                                <li>Point 3</li>
+                            </ul>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-rocket"></i></div>
+                            <h3>[Fonctionnalité 2]</h3>
+                            <ul>
+                                <li>Point 1</li>
+                                <li>Point 2</li>
+                            </ul>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                            <h3>[Fonctionnalité 3]</h3>
+                            <ul>
+                                <li>Point 1</li>
+                                <li>Point 2</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tâches Réalisées -->
+                <div class="content-block">
+                    <h2><i class="fas fa-tasks"></i> Tâches Réalisées Personnellement</h2>
+
+                    <div class="tasks-timeline">
+                        <div class="task-item">
+                            <div class="task-marker completed"></div>
+                            <div class="task-content">
+                                <h3>Phase 1 : [Nom de la phase]</h3>
+                                <ul>
+                                    <li>Tâche 1</li>
+                                    <li>Tâche 2</li>
+                                    <li>Tâche 3</li>
+                                </ul>
+                                <span class="task-status status-done">Terminé - [Date]</span>
+                            </div>
+                        </div>
+
+                        <div class="task-item">
+                            <div class="task-marker completed"></div>
+                            <div class="task-content">
+                                <h3>Phase 2 : [Nom de la phase]</h3>
+                                <ul>
+                                    <li>Tâche 1</li>
+                                    <li>Tâche 2</li>
+                                </ul>
+                                <span class="task-status status-done">Terminé - [Date]</span>
+                            </div>
+                        </div>
+
+                        <div class="task-item">
+                            <div class="task-marker"></div>
+                            <div class="task-content">
+                                <h3>Phase 3 : [Nom de la phase]</h3>
+                                <ul>
+                                    <li>Tâche 1</li>
+                                    <li>Tâche 2</li>
+                                </ul>
+                                <span class="task-status status-progress">En cours</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Extraits de Code (optionnel) -->
+                <div class="content-block">
+                    <h2><i class="fas fa-code"></i> Extraits de Code Significatifs</h2>
+
+                    <div class="code-section">
+                        <h3>[Titre de l'extrait]</h3>
+                        <pre><code class="language-[langage]">
+// Votre code ici
+function exemple() {
+    console.log("Code d'exemple");
+}
+</code></pre>
+                    </div>
+                </div>
+
+                <!-- Compétences BTS -->
+                <div class="content-block">
+                    <h2><i class="fas fa-graduation-cap"></i> Compétences BTS SIO Mobilisées</h2>
+
+                    <div class="competences-project">
+                        <div class="comp-category">
+                            <h3>Bloc E4 - Conception et Développement</h3>
+                            <div class="comp-list">
+                                <div class="comp-item">
+                                    <div class="comp-header">
+                                        <span class="comp-code">C1.1</span>
+                                        <span class="comp-name">Analyser un besoin exprimé</span>
+                                        <span class="comp-level level-3">Maîtrisé</span>
+                                    </div>
+                                    <p>Description de comment cette compétence a été mise en œuvre</p>
+                                </div>
+
+                                <div class="comp-item">
+                                    <div class="comp-header">
+                                        <span class="comp-code">C1.2</span>
+                                        <span class="comp-name">Concevoir une solution applicative</span>
+                                        <span class="comp-level level-3">Maîtrisé</span>
+                                    </div>
+                                    <p>Description de comment cette compétence a été mise en œuvre</p>
+                                </div>
+
+                                <div class="comp-item">
+                                    <div class="comp-header">
+                                        <span class="comp-code">C1.3</span>
+                                        <span class="comp-name">Développer des composants logiciels</span>
+                                        <span class="comp-level level-4">Expert</span>
+                                    </div>
+                                    <p>Description de comment cette compétence a été mise en œuvre</p>
+                                </div>
+
+                                <!-- Ajouter d'autres compétences selon le projet -->
+                            </div>
+                        </div>
+
+                        <div class="comp-category">
+                            <h3>Bloc E5 - Gestion du Patrimoine Informatique</h3>
+                            <div class="comp-list">
+                                <div class="comp-item">
+                                    <div class="comp-header">
+                                        <span class="comp-code">C2.4</span>
+                                        <span class="comp-name">Travailler en mode projet</span>
+                                        <span class="comp-level level-3">Maîtrisé</span>
+                                    </div>
+                                    <p>Description de comment cette compétence a été mise en œuvre</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comp-category">
+                            <h3>Cybersécurité</h3>
+                            <div class="comp-list">
+                                <div class="comp-item">
+                                    <div class="comp-header">
+                                        <span class="comp-code">C3.1</span>
+                                        <span class="comp-name">Protéger les données</span>
+                                        <span class="comp-level level-3">Maîtrisé</span>
+                                    </div>
+                                    <p>Description de comment cette compétence a été mise en œuvre</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Conclusion -->
+                <div class="content-block">
+                    <h2><i class="fas fa-check-circle"></i> Conclusion et Apports</h2>
+                    <div class="conclusion-content">
+                        <p>
+                            [Résumé du projet, ce que vous avez appris, les compétences développées,
+                            les points forts et les axes d'amélioration]
+                        </p>
+                        <p>
+                            Ce projet m'a particulièrement fait progresser sur :
+                        </p>
+                        <ul>
+                            <li><strong>Compétence 1</strong> : Explication</li>
+                            <li><strong>Compétence 2</strong> : Explication</li>
+                            <li><strong>Compétence 3</strong> : Explication</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Portfolio BTS SIO SLAM - Promotion 2026</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(copy styles.css styles-old.css)",
+      "Bash(copy styles-new.css styles.css)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

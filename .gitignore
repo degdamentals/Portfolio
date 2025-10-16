@@ -1,0 +1,41 @@
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary Files
+*.tmp
+*.bak
+*.log
+
+# Personal Files (à ne pas versionner)
+# Décommenter si vous avez des fichiers personnels sensibles
+# config.json
+# credentials.json
+
+# Build/Deploy Files (si vous utilisez un build process)
+node_modules/
+dist/
+build/
+.cache/
+
+# Environment Variables (si utilisé)
+.env
+.env.local
+.env.production
+
+# Fichiers de test
+test/
+*.test.js
+
+# Documentation drafts
+drafts/
+notes.txt
+TODO.txt

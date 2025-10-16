@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Linkedln - Portfolio BTS SIO</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="projet-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Portfolio BTS SIO</div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#accueil" class="nav-link">Accueil</a></li>
+                <li><a href="index.html#presentation" class="nav-link">Présentation</a></li>
+                <li><a href="index.html#competences-synthese" class="nav-link">Tableau E4/E5</a></li>
+                <li><a href="index.html#projets" class="nav-link active">Projets</a></li>
+                <li><a href="index.html#competences" class="nav-link">Compétences</a></li>
+                <li><a href="index.html#veille" class="nav-link">Veille</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <section class="project-hero">
+        <div class="container">
+            <a href="index.html#projets" class="back-link"><i class="fas fa-arrow-left"></i> Retour aux projets</a>
+            <div class="project-hero-content">
+                <div class="project-hero-icon">
+                    <i class="fas fa-users-cog"></i>
+                </div>
+                <h1>Linkedln</h1>
+                <p class="project-hero-subtitle">Plateforme de mise en relation alternants / entreprises</p>
+                <div class="project-meta">
+                    <span><i class="fas fa-calendar"></i> 2024 - 2025</span>
+                    <span><i class="fas fa-briefcase"></i> Projet Alternance</span>
+                    <span><i class="fas fa-code-branch"></i> En développement</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/degdamentals/Linkedln" target="_blank" class="btn-primary">
+                        <i class="fab fa-github"></i> Voir sur GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contexte et Objectifs -->
+    <section class="section">
+        <div class="container">
+            <div class="project-content">
+                <div class="content-block">
+                    <h2><i class="fas fa-bullseye"></i> Contexte et Objectifs</h2>
+                    <div class="content-text">
+                        <h3>Contexte du projet</h3>
+                        <p>
+                            Face aux difficultés rencontrées par les étudiants en recherche d'alternance et les entreprises
+                            à la recherche de profils qualifiés, le projet <strong>Linkedln</strong> vise à créer une
+                            plateforme dédiée facilitant la mise en relation directe entre ces deux publics.
+                        </p>
+                        <p>
+                            Ce projet s'inscrit dans le cadre de mon alternance et répond à un besoin concret observé
+                            dans le monde de la formation professionnelle. L'objectif est de simplifier et d'accélérer
+                            le processus de recrutement en alternance.
+                        </p>
+
+                        <h3>Objectifs principaux</h3>
+                        <ul class="objectives-list">
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>Créer une plateforme web responsive</strong> permettant aux alternants
+                                    de créer leur profil et de postuler à des offres
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>Offrir un espace entreprise</strong> pour publier des offres d'alternance
+                                    et consulter les profils des candidats
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>Mettre en place un système de matching intelligent</strong> entre les
+                                    compétences recherchées et les profils disponibles
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>Garantir la sécurité des données</strong> avec authentification sécurisée
+                                    et protection des informations personnelles
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>Faciliter la communication</strong> via un système de messagerie intégré
+                                    entre candidats et recruteurs
+                                </div>
+                            </li>
+                        </ul>
+
+                        <h3>Problématiques techniques résolues</h3>
+                        <ul>
+                            <li>Conception d'une architecture applicative évolutive et maintenable</li>
+                            <li>Mise en place d'une authentification multi-rôles (alternants, entreprises, administrateurs)</li>
+                            <li>Gestion optimisée des données utilisateurs et des offres d'emploi</li>
+                            <li>Création d'algorithmes de recherche et de matching pertinents</li>
+                            <li>Développement d'interfaces utilisateur intuitives et accessibles</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Environnement Technique -->
+                <div class="content-block">
+                    <h2><i class="fas fa-cogs"></i> Environnement Technique</h2>
+
+                    <div class="tech-grid">
+                        <div class="tech-category">
+                            <h3><i class="fas fa-palette"></i> Frontend (Prévu)</h3>
+                            <ul class="tech-list">
+                                <li><span class="tech-badge">React</span> Framework JavaScript pour l'interface utilisateur</li>
+                                <li><span class="tech-badge">TypeScript</span> Typage statique pour plus de robustesse</li>
+                                <li><span class="tech-badge">Tailwind CSS</span> Framework CSS utilitaire pour le design</li>
+                                <li><span class="tech-badge">Axios</span> Client HTTP pour les appels API</li>
+                                <li><span class="tech-badge">React Router</span> Gestion de la navigation</li>
+                            </ul>
+                        </div>
+
+                        <div class="tech-category">
+                            <h3><i class="fas fa-server"></i> Backend (Prévu)</h3>
+                            <ul class="tech-list">
+                                <li><span class="tech-badge">Node.js</span> Environnement d'exécution JavaScript côté serveur</li>
+                                <li><span class="tech-badge">Express</span> Framework web pour les API REST</li>
+                                <li><span class="tech-badge">JWT</span> Authentification par tokens sécurisés</li>
+                                <li><span class="tech-badge">Bcrypt</span> Hachage des mots de passe</li>
+                                <li><span class="tech-badge">Multer</span> Gestion des uploads de fichiers (CV, photos)</li>
+                            </ul>
+                        </div>
+
+                        <div class="tech-category">
+                            <h3><i class="fas fa-database"></i> Base de données (Prévue)</h3>
+                            <ul class="tech-list">
+                                <li><span class="tech-badge">PostgreSQL</span> SGBD relationnel pour les données structurées</li>
+                                <li><span class="tech-badge">Prisma</span> ORM moderne pour Node.js</li>
+                                <li><span class="tech-badge">Redis</span> Cache pour améliorer les performances</li>
+                            </ul>
+                        </div>
+
+                        <div class="tech-category">
+                            <h3><i class="fas fa-tools"></i> Outils et DevOps</h3>
+                            <ul class="tech-list">
+                                <li><span class="tech-badge">Git / GitHub</span> Gestion de version et hébergement du code</li>
+                                <li><span class="tech-badge">VS Code</span> Environnement de développement</li>
+                                <li><span class="tech-badge">Postman</span> Tests des API REST</li>
+                                <li><span class="tech-badge">Docker</span> Conteneurisation de l'application</li>
+                                <li><span class="tech-badge">GitHub Actions</span> CI/CD pour les déploiements automatisés</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diagrammes et Modélisation -->
+                <div class="content-block">
+                    <h2><i class="fas fa-project-diagram"></i> Modélisation et Architecture</h2>
+
+                    <div class="diagram-section">
+                        <h3>Diagramme de cas d'utilisation</h3>
+                        <div class="diagram-placeholder">
+                            <div class="diagram-content">
+                                <h4>Acteurs principaux :</h4>
+                                <ul>
+                                    <li><strong>Alternant</strong> : Créer profil, rechercher offres, postuler, gérer candidatures</li>
+                                    <li><strong>Entreprise</strong> : Publier offres, consulter profils, gérer candidatures, contacter alternants</li>
+                                    <li><strong>Administrateur</strong> : Modérer contenus, gérer utilisateurs, consulter statistiques</li>
+                                </ul>
+                                <p class="diagram-note">
+                                    <i class="fas fa-info-circle"></i>
+                                    Ce diagramme sera créé avec Lucidchart ou Draw.io et intégré dans la documentation finale
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="diagram-section">
+                        <h3>Modèle Conceptuel de Données (MCD) - Schéma simplifié</h3>
+                        <div class="mcd-text">
+                            <div class="entity">
+                                <h4>Utilisateur</h4>
+                                <ul>
+                                    <li>id_utilisateur (PK)</li>
+                                    <li>email</li>
+                                    <li>mot_de_passe (hashé)</li>
+                                    <li>type (alternant/entreprise/admin)</li>
+                                    <li>date_inscription</li>
+                                </ul>
+                            </div>
+
+                            <div class="entity">
+                                <h4>Profil_Alternant</h4>
+                                <ul>
+                                    <li>id_profil (PK)</li>
+                                    <li>id_utilisateur (FK)</li>
+                                    <li>nom, prénom</li>
+                                    <li>formation, niveau</li>
+                                    <li>compétences (JSON)</li>
+                                    <li>cv_url, photo_url</li>
+                                    <li>localisation</li>
+                                </ul>
+                            </div>
+
+                            <div class="entity">
+                                <h4>Profil_Entreprise</h4>
+                                <ul>
+                                    <li>id_entreprise (PK)</li>
+                                    <li>id_utilisateur (FK)</li>
+                                    <li>nom_entreprise</li>
+                                    <li>secteur_activite</li>
+                                    <li>siret</li>
+                                    <li>adresse, ville</li>
+                                    <li>description</li>
+                                </ul>
+                            </div>
+
+                            <div class="entity">
+                                <h4>Offre_Alternance</h4>
+                                <ul>
+                                    <li>id_offre (PK)</li>
+                                    <li>id_entreprise (FK)</li>
+                                    <li>titre</li>
+                                    <li>description</li>
+                                    <li>competences_requises (JSON)</li>
+                                    <li>localisation</li>
+                                    <li>date_publication</li>
+                                    <li>statut (active/pourvue)</li>
+                                </ul>
+                            </div>
+
+                            <div class="entity">
+                                <h4>Candidature</h4>
+                                <ul>
+                                    <li>id_candidature (PK)</li>
+                                    <li>id_offre (FK)</li>
+                                    <li>id_alternant (FK)</li>
+                                    <li>date_candidature</li>
+                                    <li>statut (en_cours/acceptée/refusée)</li>
+                                    <li>message_motivation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="architecture-section">
+                        <h3>Architecture applicative</h3>
+                        <div class="architecture-diagram">
+                            <div class="arch-layer">
+                                <h4>Couche Présentation</h4>
+                                <p>React + TypeScript - Interface utilisateur responsive</p>
+                            </div>
+                            <div class="arch-arrow">↓</div>
+                            <div class="arch-layer">
+                                <h4>Couche API</h4>
+                                <p>Express.js - API REST + Authentification JWT</p>
+                            </div>
+                            <div class="arch-arrow">↓</div>
+                            <div class="arch-layer">
+                                <h4>Couche Métier</h4>
+                                <p>Services - Logique métier et algorithmes de matching</p>
+                            </div>
+                            <div class="arch-arrow">↓</div>
+                            <div class="arch-layer">
+                                <h4>Couche Données</h4>
+                                <p>PostgreSQL + Prisma ORM + Redis Cache</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tâches Réalisées -->
+                <div class="content-block">
+                    <h2><i class="fas fa-tasks"></i> Tâches Réalisées Personnellement</h2>
+
+                    <div class="tasks-timeline">
+                        <div class="task-item">
+                            <div class="task-marker"></div>
+                            <div class="task-content">
+                                <h3>Phase 1 : Analyse et Conception</h3>
+                                <ul>
+                                    <li>Recueil des besoins auprès des utilisateurs potentiels (étudiants et entreprises)</li>
+                                    <li>Rédaction du cahier des charges fonctionnel</li>
+                                    <li>Conception des maquettes UI/UX (wireframes et prototypes)</li>
+                                    <li>Élaboration des diagrammes UML (cas d'utilisation, classes, séquences)</li>
+                                    <li>Modélisation de la base de données (MCD/MLD)</li>
+                                </ul>
+                                <span class="task-status status-done">Terminé</span>
+                            </div>
+                        </div>
+
+                        <div class="task-item">
+                            <div class="task-marker"></div>
+                            <div class="task-content">
+                                <h3>Phase 2 : Configuration de l'environnement</h3>
+                                <ul>
+                                    <li>Initialisation du repository Git et structure du projet</li>
+                                    <li>Configuration des outils de développement (ESLint, Prettier, TypeScript)</li>
+                                    <li>Mise en place de Docker pour l'environnement de développement</li>
+                                    <li>Configuration de la base de données PostgreSQL avec Prisma</li>
+                                </ul>
+                                <span class="task-status status-progress">En cours</span>
+                            </div>
+                        </div>
+
+                        <div class="task-item">
+                            <div class="task-marker"></div>
+                            <div class="task-content">
+                                <h3>Phase 3 : Développement Backend (Prévu)</h3>
+                                <ul>
+                                    <li>Création de l'API REST avec Express.js</li>
+                                    <li>Implémentation du système d'authentification JWT</li>
+                                    <li>Développement des endpoints CRUD pour les utilisateurs, offres et candidatures</li>
+                                    <li>Mise en place de la validation des données avec Joi</li>
+                                    <li>Gestion des uploads de fichiers (CV, photos de profil)</li>
+                                    <li>Implémentation de l'algorithme de matching compétences/offres</li>
+                                </ul>
+                                <span class="task-status status-pending">Planifié</span>
+                            </div>
+                        </div>
+
+                        <div class="task-item">
+                            <div class="task-marker"></div>
+                            <div class="task-content">
+                                <h3>Phase 4 : Développement Frontend (Prévu)</h3>
+                                <ul>
+                                    <li>Création des composants React réutilisables</li>
+                                    <li>Implémentation des pages d'inscription et connexion</li>
+                                    <li>Développement du tableau de bord alternant</li>
+                                    <li>Développement du tableau de bord entreprise</li>
+                                    <li>Système de recherche et filtres avancés</li>
+                                    <li>Interface de gestion des candidatures</li>
+                                </ul>
+                                <span class="task-status status-pending">Planifié</span>
+                            </div>
+                        </div>
+
+                        <div class="task-item">
+                            <div class="task-marker"></div>
+                            <div class="task-content">
+                                <h3>Phase 5 : Tests et Déploiement (Prévu)</h3>
+                                <ul>
+                                    <li>Rédaction et exécution de tests unitaires</li>
+                                    <li>Tests d'intégration des API</li>
+                                    <li>Tests end-to-end avec Cypress</li>
+                                    <li>Configuration du CI/CD avec GitHub Actions</li>
+                                    <li>Déploiement sur un hébergeur cloud (Vercel/Heroku)</li>
+                                    <li>Documentation technique et utilisateur</li>
+                                </ul>
+                                <span class="task-status status-pending">Planifié</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Compétences BTS -->
+                <div class="content-block">
+                    <h2><i class="fas fa-graduation-cap"></i> Compétences BTS SIO Mobilisées</h2>
+
+                    <div class="competences-project">
+                        <div class="comp-category">
+                            <h3>Bloc E4 - Conception et Développement</h3>
+                            <div class="comp-list">
+                                <div class="comp-item">
+                                    <div class="comp-header">
+                                        <span class="comp-code">C1.1</span>
+                                        <span class="comp-name">Analyser un besoin exprimé</span>
+                                        <span class="comp-level level-3">Maîtrisé</span>
+                                    </div>
+                                    <p>Recueil et analyse des besoins utilisateurs, rédaction du cahier des charges fonctionnel</p>
+                                </div>
+
+                                <div class="comp-item">
+                                    <div class="comp-header">
+                                        <span class="comp-code">C1.2</span>
+                                        <span class="comp-name">Concevoir une solution applicative</span>
+                                        <span class="comp-level level-3">Maîtrisé</span>
+                                    </div>
+                                    <p>Conception de l'architecture logicielle, modélisation UML, choix technologiques justifiés</p>
+                                </div>
+
+                                <div class="comp-item">
+                                    <div class="comp-header">
+                                        <span class="comp-code">C1.3</span>
+                                        <span class="comp-name">Développer des composants logiciels</span>
+                                        <span class="comp-level level-4">Expert</span>
+                                    </div>
+                                    <p>Développement de composants React, création d'API REST, implémentation de la logique métier</p>
+                                </div>
+
+                                <div class="comp-item">
+                                    <div class="comp-header">
+                                        <span class="comp-code">C1.4</span>
+                                        <span class="comp-name">Réaliser des tests et valider</span>
+                                        <span class="comp-level level-3">Maîtrisé</span>
+                                    </div>
+                                    <p>Tests unitaires, tests d'intégration des API, validation des fonctionnalités</p>
+                                </div>
+
+                                <div class="comp-item">
+                                    <div class="comp-header">
+                                        <span class="comp-code">C1.5</span>
+                                        <span class="comp-name">Gérer les données</span>
+                                        <span class="comp-level level-3">Maîtrisé</span>
+                                    </div>
+                                    <p>Modélisation base de données, requêtes SQL optimisées, utilisation de Prisma ORM</p>
+                                </div>
+
+                                <div class="comp-item">
+                                    <div class="comp-header">
+                                        <span class="comp-code">C1.6</span>
+                                        <span class="comp-name">Déployer une solution applicative</span>
+                                        <span class="comp-level level-2">Acquis</span>
+                                    </div>
+                                    <p>Déploiement prévu via Docker et hébergement cloud (Vercel/Heroku)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comp-category">
+                            <h3>Bloc E5 - Gestion du Patrimoine Informatique</h3>
+                            <div class="comp-list">
+                                <div class="comp-item">
+                                    <div class="comp-header">
+                                        <span class="comp-code">C2.3</span>
+                                        <span class="comp-name">Développer la présence en ligne</span>
+                                        <span class="comp-level level-4">Expert</span>
+                                    </div>
+                                    <p>Création d'une plateforme web complète avec interface moderne et expérience utilisateur soignée</p>
+                                </div>
+
+                                <div class="comp-item">
+                                    <div class="comp-header">
+                                        <span class="comp-code">C2.4</span>
+                                        <span class="comp-name">Travailler en mode projet</span>
+                                        <span class="comp-level level-3">Maîtrisé</span>
+                                    </div>
+                                    <p>Gestion de projet agile, utilisation de Git pour le versioning, documentation continue</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comp-category">
+                            <h3>Cybersécurité</h3>
+                            <div class="comp-list">
+                                <div class="comp-item">
+                                    <div class="comp-header">
+                                        <span class="comp-code">C3.1</span>
+                                        <span class="comp-name">Protéger les données</span>
+                                        <span class="comp-level level-3">Maîtrisé</span>
+                                    </div>
+                                    <p>Hachage des mots de passe avec Bcrypt, chiffrement des données sensibles, validation des entrées</p>
+                                </div>
+
+                                <div class="comp-item">
+                                    <div class="comp-header">
+                                        <span class="comp-code">C3.2</span>
+                                        <span class="comp-name">Préserver l'identité numérique</span>
+                                        <span class="comp-level level-3">Maîtrisé</span>
+                                    </div>
+                                    <p>Authentification JWT sécurisée, gestion des sessions, protection RGPD des données personnelles</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Difficultés et Améliorations -->
+                <div class="content-block">
+                    <h2><i class="fas fa-lightbulb"></i> Difficultés Rencontrées et Améliorations Futures</h2>
+
+                    <div class="challenges-grid">
+                        <div class="challenge-card">
+                            <h3><i class="fas fa-exclamation-triangle"></i> Difficultés</h3>
+                            <ul>
+                                <li>
+                                    <strong>Choix technologiques :</strong> Comparaison entre différentes stacks techniques
+                                    (Next.js vs React, MySQL vs PostgreSQL) pour répondre aux besoins du projet
+                                </li>
+                                <li>
+                                    <strong>Algorithme de matching :</strong> Conception d'un système pertinent pour faire
+                                    correspondre compétences et offres de manière efficace
+                                </li>
+                                <li>
+                                    <strong>Sécurité :</strong> Mise en place d'une authentification robuste et protection
+                                    contre les vulnérabilités courantes (OWASP Top 10)
+                                </li>
+                                <li>
+                                    <strong>Gestion du temps :</strong> Équilibre entre l'alternance, les cours et le
+                                    développement du projet
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="challenge-card">
+                            <h3><i class="fas fa-rocket"></i> Améliorations Prévues</h3>
+                            <ul>
+                                <li>
+                                    <strong>Messagerie en temps réel :</strong> Intégration de WebSockets pour un système
+                                    de chat instantané entre alternants et entreprises
+                                </li>
+                                <li>
+                                    <strong>Notifications push :</strong> Alertes automatiques pour les nouvelles offres
+                                    correspondant aux profils
+                                </li>
+                                <li>
+                                    <strong>Système de recommandation :</strong> Amélioration de l'algorithme avec machine
+                                    learning pour des suggestions plus pertinentes
+                                </li>
+                                <li>
+                                    <strong>Application mobile :</strong> Développement d'une version React Native pour
+                                    iOS et Android
+                                </li>
+                                <li>
+                                    <strong>Tableau de bord administrateur :</strong> Interface avancée avec statistiques
+                                    et analytics
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Conclusion -->
+                <div class="content-block">
+                    <h2><i class="fas fa-check-circle"></i> Conclusion et Apports</h2>
+                    <div class="conclusion-content">
+                        <p>
+                            Le projet <strong>Linkedln</strong> représente un défi technique et professionnel majeur dans
+                            mon parcours BTS SIO SLAM. Il m'a permis de mettre en pratique l'ensemble des compétences
+                            acquises en formation, de la conception à la réalisation d'une application web complète.
+                        </p>
+                        <p>
+                            Ce projet m'a particulièrement fait progresser sur :
+                        </p>
+                        <ul>
+                            <li>La <strong>conception d'architectures applicatives</strong> scalables et maintenables</li>
+                            <li>Le <strong>développement full-stack</strong> avec des technologies modernes</li>
+                            <li>La <strong>sécurité applicative</strong> et la protection des données personnelles</li>
+                            <li>La <strong>gestion de projet</strong> et l'organisation du travail en autonomie</li>
+                            <li>La <strong>documentation technique</strong> et la communication autour du projet</li>
+                        </ul>
+                        <p>
+                            Bien que le projet soit encore en cours de développement, les fondations sont solides et
+                            la roadmap clairement définie. L'objectif est de livrer une première version fonctionnelle
+                            d'ici la fin de l'année scolaire 2024-2025, qui pourra servir de support concret pour
+                            les épreuves E4 et E5 du BTS.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Portfolio BTS SIO SLAM - Promotion 2026</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

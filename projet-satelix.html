@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Satelix - Portfolio BTS SIO</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="projet-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Portfolio BTS SIO</div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#accueil" class="nav-link">Accueil</a></li>
+                <li><a href="index.html#presentation" class="nav-link">Présentation</a></li>
+                <li><a href="index.html#competences-synthese" class="nav-link">Tableau E4/E5</a></li>
+                <li><a href="index.html#projets" class="nav-link active">Projets</a></li>
+                <li><a href="index.html#competences" class="nav-link">Compétences</a></li>
+                <li><a href="index.html#veille" class="nav-link">Veille</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <section class="project-hero" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+        <div class="container">
+            <a href="index.html#projets" class="back-link"><i class="fas fa-arrow-left"></i> Retour aux projets</a>
+            <div class="project-hero-content">
+                <div class="project-hero-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h1>Satelix Automation Suite v2.0</h1>
+                <p class="project-hero-subtitle">Suite d'automatisation d'inventaires et de déploiements</p>
+                <div class="project-meta">
+                    <span><i class="fas fa-calendar"></i> 2024 - 2025</span>
+                    <span><i class="fas fa-briefcase"></i> Projet Entreprise</span>
+                    <span><i class="fas fa-check-circle"></i> Production</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/degdamentals/Satelix" target="_blank" class="btn-primary">
+                        <i class="fab fa-github"></i> Voir sur GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contexte et Objectifs -->
+    <section class="section">
+        <div class="container">
+            <div class="project-content">
+                <div class="content-block">
+                    <h2><i class="fas fa-bullseye"></i> Contexte et Objectifs</h2>
+                    <div class="content-text">
+                        <h3>Contexte du projet</h3>
+                        <p>
+                            Dans le cadre de mon alternance, l'entreprise utilisait <strong>Satelix</strong> pour la gestion
+                            de son parc informatique et <strong>Sage 100</strong> pour la gestion commerciale. La création
+                            manuelle des inventaires Satelix et leur synchronisation avec Sage 100 représentaient une tâche
+                            chronophage et répétitive, réalisée quotidiennement par les équipes techniques.
+                        </p>
+                        <p>
+                            Face à ce constat, j'ai proposé de développer une <strong>suite d'automatisation complète</strong>
+                            permettant de générer automatiquement les inventaires, de les envoyer aux serveurs concernés,
+                            et de gérer les déploiements de configurations. Cette solution a permis de <strong>faire gagner
+                            plusieurs heures par jour</strong> à l'équipe IT.
+                        </p>
+
+                        <h3>Objectifs principaux</h3>
+                        <ul class="objectives-list">
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>Automatiser la création d'inventaires Satelix</strong> pour éliminer
+                                    les tâches manuelles répétitives
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>Planifier l'exécution quotidienne</strong> à heure fixe (8h00) sans
+                                    intervention humaine
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>Garantir la compatibilité multi-OS</strong> (Windows et Linux) pour
+                                    couvrir tout le parc serveurs
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>Offrir une interface utilisateur intuitive</strong> pour les techniciens
+                                    moins à l'aise avec la ligne de commande
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>Intégrer des outils de diagnostic et réparation</strong> pour résoudre
+                                    automatiquement les problèmes courants
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>Assurer la sécurité des identifiants</strong> via chiffrement et stockage
+                                    local sécurisé
+                                </div>
+                            </li>
+                        </ul>
+
+                        <h3>Bénéfices pour l'entreprise</h3>
+                        <ul>
+                            <li><strong>Gain de temps :</strong> Économie de 2-3 heures par jour d'intervention manuelle</li>
+                            <li><strong>Fiabilité :</strong> Réduction des erreurs humaines dans la création des inventaires</li>
+                            <li><strong>Traçabilité :</strong> Logs détaillés de toutes les opérations effectuées</li>
+                            <li><strong>Simplicité :</strong> Aucune compétence technique requise pour utiliser l'outil</li>
+                            <li><strong>Portabilité :</strong> Fonctionnement depuis une clé USB sans installation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Environnement Technique -->
+                <div class="content-block">
+                    <h2><i class="fas fa-cogs"></i> Environnement Technique</h2>
+
+                    <div class="tech-grid">
+                        <div class="tech-category">
+                            <h3><i class="fas fa-code"></i> Langages de programmation</h3>
+                            <ul class="tech-list">
+                                <li><span class="tech-badge python">Python 80.4%</span> Langage principal pour la logique d'automatisation</li>
+                                <li><span class="tech-badge batch">Batch 15.8%</span> Scripts Windows pour planification et exécution</li>
+                                <li><span class="tech-badge shell">Shell 3.8%</span> Scripts Linux pour compatibilité serveurs Unix</li>
+                            </ul>
+                        </div>
+
+                        <div class="tech-category">
+                            <h3><i class="fas fa-book-open"></i> Bibliothèques Python</h3>
+                            <ul class="tech-list">
+                                <li><span class="tech-badge">Selenium</span> Automatisation web pour interaction avec Satelix</li>
+                                <li><span class="tech-badge">python-dotenv</span> Gestion sécurisée des variables d'environnement</li>
+                                <li><span class="tech-badge">cryptography</span> Chiffrement des identifiants stockés</li>
+                                <li><span class="tech-badge">schedule</span> Planification des tâches quotidiennes</li>
+                                <li><span class="tech-badge">logging</span> Système de logs détaillés et structurés</li>
+                                <li><span class="tech-badge">tkinter</span> Interface graphique moderne (mode Modern)</li>
+                            </ul>
+                        </div>
+
+                        <div class="tech-category">
+                            <h3><i class="fas fa-window-maximize"></i> Interfaces Utilisateur</h3>
+                            <ul class="tech-list">
+                                <li><strong>Mode Modern :</strong> Interface graphique Tkinter avec design épuré</li>
+                                <li><strong>Mode Classic :</strong> Interface en ligne de commande pour les utilisateurs avancés</li>
+                                <li><strong>Scripts Batch/Shell :</strong> Exécution silencieuse en tâche planifiée</li>
+                            </ul>
+                        </div>
+
+                        <div class="tech-category">
+                            <h3><i class="fas fa-tools"></i> Outils et Environnement</h3>
+                            <ul class="tech-list">
+                                <li><span class="tech-badge">Git / GitHub</span> Gestion de version et collaboration</li>
+                                <li><span class="tech-badge">VS Code</span> Environnement de développement</li>
+                                <li><span class="tech-badge">Chrome/Chromium</span> Navigateur requis pour Selenium</li>
+                                <li><span class="tech-badge">Windows Task Scheduler</span> Planification Windows</li>
+                                <li><span class="tech-badge">Cron</span> Planification Linux</li>
+                                <li><span class="tech-badge">Sage 100</span> Logiciel de gestion commerciale</li>
+                                <li><span class="tech-badge">Satelix</span> Outil de gestion de parc informatique</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="architecture-section">
+                        <h3>Architecture du système</h3>
+                        <div class="system-diagram">
+                            <div class="system-layer">
+                                <h4>Interface Utilisateur</h4>
+                                <p>Mode Modern (GUI) / Mode Classic (CLI)</p>
+                            </div>
+                            <div class="arch-arrow">↓</div>
+                            <div class="system-layer">
+                                <h4>Module d'Automatisation Python</h4>
+                                <p>Selenium WebDriver + Logique métier</p>
+                            </div>
+                            <div class="arch-arrow">↓</div>
+                            <div class="system-layer">
+                                <h4>Système de Planification</h4>
+                                <p>Task Scheduler (Windows) / Cron (Linux)</p>
+                            </div>
+                            <div class="arch-arrow">↓</div>
+                            <div class="system-layer">
+                                <h4>Cibles</h4>
+                                <p>Satelix Web + Sage 100 + Serveurs réseau</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fonctionnalités Détaillées -->
+                <div class="content-block">
+                    <h2><i class="fas fa-list-check"></i> Fonctionnalités Principales</h2>
+
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-calendar-check"></i></div>
+                            <h3>Automatisation Complète</h3>
+                            <ul>
+                                <li>Création automatique d'inventaires Satelix</li>
+                                <li>Support de plusieurs types : CMUP, DEPOT, filtres personnalisés</li>
+                                <li>Connexion automatique avec gestion des sessions</li>
+                                <li>Extraction et formatage des données depuis Sage 100</li>
+                                <li>Upload et traitement des inventaires sur les serveurs</li>
+                            </ul>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-clock"></i></div>
+                            <h3>Planification Intelligente</h3>
+                            <ul>
+                                <li>Exécution quotidienne programmée à 8h00</li>
+                                <li>Compatible Windows (Task Scheduler) et Linux (Cron)</li>
+                                <li>Mode silencieux pour exécution en arrière-plan</li>
+                                <li>Retry automatique en cas d'échec</li>
+                                <li>Notifications par email en cas de problème</li>
+                            </ul>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-wrench"></i></div>
+                            <h3>Outils de Diagnostic</h3>
+                            <ul>
+                                <li>Détection automatique des problèmes de connexion</li>
+                                <li>Réparation des configurations corrompues</li>
+                                <li>Test de connectivité réseau et serveurs</li>
+                                <li>Vérification de l'intégrité des dépendances</li>
+                                <li>Nettoyage des fichiers temporaires</li>
+                            </ul>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                            <h3>Sécurité Renforcée</h3>
+                            <ul>
+                                <li>Stockage chiffré des identifiants dans fichier .env local</li>
+                                <li>Communication chiffrée avec les serveurs</li>
+                                <li>Aucune transmission des credentials en clair</li>
+                                <li>Logs détaillés sans exposition d'informations sensibles</li>
+                                <li>Isolation des processus pour sécurité maximale</li>
+                            </ul>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-laptop"></i></div>
+                            <h3>Portabilité</h3>
+                            <ul>
+                                <li>Exécution depuis clé USB sans installation</li>
+                                <li>Configuration portable entre postes</li>
+                                <li>Pas de droits administrateurs requis</li>
+                                <li>Compatible Python 3.8+ sur tous les OS</li>
+                                <li>Package autonome avec toutes les dépendances</li>
+                            </ul>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-file-alt"></i></div>
+                            <h3>Logging et Traçabilité</h3>
+                            <ul>
+                                <li>Logs détaillés de toutes les opérations</li>
+                                <li>Horodatage précis de chaque action</li>
+                                <li>Rotation automatique des fichiers de logs</li>
+                                <li>Niveaux de log configurables (INFO, WARNING, ERROR)</li>
+                                <li>Export des logs pour analyse ou audit</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tâches Réalisées -->
+                <div class="content-block">
+                    <h2><i class="fas fa-tasks"></i> Tâches Réalisées Personnellement</h2>
+
+                    <div class="tasks-timeline">
+                        <div class="task-item">
+                            <div class="task-marker completed"></div>
+                            <div class="task-content">
+                                <h3>Phase 1 : Analyse et Recueil des Besoins</h3>
+                                <ul>
+                                    <li>Observation des processus manuels existants</li>
+                                    <li>Identification des tâches répétitives et automatisables</li>
+                                    <li>Entretiens avec les utilisateurs finaux (équipe IT)</li>
+                                    <li>Rédaction du cahier des charges fonctionnel</li>
+                                    <li>Validation des objectifs avec le responsable technique</li>
+                                </ul>
+                                <span class="task-status status-done">Terminé - Septembre 2024</span>
+                            </div>
+                        </div>
+
+                        <div class="task-item">
+                            <div class="task-marker completed"></div>
+                            <div class="task-content">
+                                <h3>Phase 2 : Conception et Prototypage</h3>
+                                <ul>
+                                    <li>Étude comparative des solutions d'automatisation (Selenium vs API)</li>
+                                    <li>Conception de l'architecture modulaire du système</li>
+                                    <li>Création des maquettes d'interfaces (Modern et Classic)</li>
+                                    <li>Définition des structures de données et formats de fichiers</li>
+                                    <li>Développement d'un prototype minimal viable (MVP)</li>
+                                </ul>
+                                <span class="task-status status-done">Terminé - Octobre 2024</span>
+                            </div>
+                        </div>
+
+                        <div class="task-item">
+                            <div class="task-marker completed"></div>
+                            <div class="task-content">
+                                <h3>Phase 3 : Développement du Module d'Automatisation</h3>
+                                <ul>
+                                    <li>Implémentation du module Selenium pour navigation web automatique</li>
+                                    <li>Développement de la logique de connexion et gestion de session</li>
+                                    <li>Création des parsers pour extraction de données Sage 100</li>
+                                    <li>Implémentation des générateurs d'inventaires par type (CMUP, DEPOT, etc.)</li>
+                                    <li>Développement du système de retry en cas d'échec réseau</li>
+                                    <li>Tests unitaires des fonctions critiques</li>
+                                </ul>
+                                <span class="task-status status-done">Terminé - Novembre 2024</span>
+                            </div>
+                        </div>
+
+                        <div class="task-item">
+                            <div class="task-marker completed"></div>
+                            <div class="task-content">
+                                <h3>Phase 4 : Interfaces Utilisateur</h3>
+                                <ul>
+                                    <li>Développement de l'interface graphique moderne avec Tkinter</li>
+                                    <li>Création de l'interface en ligne de commande (CLI)</li>
+                                    <li>Implémentation du système de menus interactifs</li>
+                                    <li>Ajout d'indicateurs de progression visuels</li>
+                                    <li>Gestion des retours utilisateur et messages d'erreur clairs</li>
+                                </ul>
+                                <span class="task-status status-done">Terminé - Décembre 2024</span>
+                            </div>
+                        </div>
+
+                        <div class="task-item">
+                            <div class="task-marker completed"></div>
+                            <div class="task-content">
+                                <h3>Phase 5 : Sécurité et Configuration</h3>
+                                <ul>
+                                    <li>Mise en place du système de chiffrement des identifiants</li>
+                                    <li>Configuration du stockage sécurisé via fichier .env</li>
+                                    <li>Implémentation du système de logs sécurisé (sans données sensibles)</li>
+                                    <li>Tests de sécurité et recherche de vulnérabilités</li>
+                                    <li>Documentation des bonnes pratiques de sécurité</li>
+                                </ul>
+                                <span class="task-status status-done">Terminé - Décembre 2024</span>
+                            </div>
+                        </div>
+
+                        <div class="task-item">
+                            <div class="task-marker completed"></div>
+                            <div class="task-content">
+                                <h3>Phase 6 : Planification et Déploiement</h3>
+                                <ul>
+                                    <li>Développement des scripts Batch pour Windows Task Scheduler</li>
+                                    <li>Création des scripts Shell pour Cron (Linux)</li>
+                                    <li>Configuration de la planification quotidienne à 8h00</li>
+                                    <li>Tests d'intégration sur environnement de production</li>
+                                    <li>Déploiement sur les postes et serveurs de l'entreprise</li>
+                                    <li>Formation des utilisateurs finaux</li>
+                                </ul>
+                                <span class="task-status status-done">Terminé - Janvier 2025</span>
+                            </div>
+                        </div>
+
+                        <div class="task-item">
+                            <div class="task-marker completed"></div>
+                            <div class="task-content">
+                                <h3>Phase 7 : Documentation et Maintenance</h3>
+                                <ul>
+                                    <li>Rédaction de la documentation utilisateur complète</li>
+                                    <li>Création du README détaillé sur GitHub</li>
+                                    <li>Documentation technique pour la maintenance</li>
+                                    <li>Mise en place d'un système de versioning (v2.0)</li>
+                                    <li>Collecte des retours utilisateurs et corrections</li>
+                                </ul>
+                                <span class="task-status status-done">Terminé - Janvier 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Extraits de Code -->
+                <div class="content-block">
+                    <h2><i class="fas fa-code"></i> Extraits de Code Significatifs</h2>
+
+                    <div class="code-section">
+                        <h3>Automatisation Selenium - Connexion sécurisée</h3>
+                        <pre><code class="language-python"># Module de connexion automatique à Satelix
+import os
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from dotenv import load_dotenv
+import logging
+
+class SatelixConnector:
+    def __init__(self):
+        load_dotenv()  # Charge les credentials depuis .env
+        self.driver = None
+        self.logger = logging.getLogger(__name__)
+
+    def connect(self):
+        """Connexion automatique à l'interface Satelix"""
+        try:
+            # Configuration du driver Chrome en mode headless
+            options = webdriver.ChromeOptions()
+            options.add_argument('--headless')
+            options.add_argument('--disable-gpu')
+            self.driver = webdriver.Chrome(options=options)
+
+            # Navigation vers Satelix
+            self.driver.get(os.getenv('SATELIX_URL'))
+
+            # Attente du chargement de la page de login
+            wait = WebDriverWait(self.driver, 10)
+            username_field = wait.until(
+                EC.presence_of_element_located((By.ID, "username"))
+            )
+
+            # Saisie des identifiants (stockés en local chiffré)
+            username_field.send_keys(os.getenv('SATELIX_USER'))
+            password_field = self.driver.find_element(By.ID, "password")
+            password_field.send_keys(os.getenv('SATELIX_PASS'))
+
+            # Clic sur le bouton de connexion
+            login_btn = self.driver.find_element(By.ID, "login-btn")
+            login_btn.click()
+
+            # Vérification de la connexion réussie
+            wait.until(EC.url_contains("dashboard"))
+            self.logger.info("Connexion à Satelix réussie")
+            return True
+
+        except Exception as e:
+            self.logger.error(f"Erreur de connexion: {str(e)}")
+            return False
+
+    def create_inventory(self, inventory_type, data):
+        """Création automatique d'un inventaire"""
+        # Navigation vers le module d'inventaire
+        self.driver.get(f"{os.getenv('SATELIX_URL')}/inventory/create")
+
+        # Sélection du type d'inventaire
+        type_select = self.driver.find_element(By.ID, "inventory-type")
+        type_select.send_keys(inventory_type)
+
+        # Remplissage des données (logique métier)
+        for field, value in data.items():
+            field_element = self.driver.find_element(By.NAME, field)
+            field_element.send_keys(value)
+
+        # Soumission du formulaire
+        submit_btn = self.driver.find_element(By.ID, "submit-inventory")
+        submit_btn.click()
+
+        self.logger.info(f"Inventaire {inventory_type} créé avec succès")
+</code></pre>
+                    </div>
+
+                    <div class="code-section">
+                        <h3>Script de Planification Windows (Batch)</h3>
+                        <pre><code class="language-batch">@echo off
+REM Script de planification quotidienne Satelix
+REM Exécution programmée à 8h00 via Windows Task Scheduler
+
+echo [%date% %time%] Démarrage de l'automatisation Satelix
+echo.
+
+REM Activation de l'environnement virtuel Python
+cd /d "%~dp0"
+call venv\Scripts\activate
+
+REM Exécution du script principal en mode silencieux
+python main.py --mode silent --log-level INFO
+
+REM Vérification du code de sortie
+if %errorlevel% neq 0 (
+    echo [ERREUR] L'automatisation a échoué (code: %errorlevel%)
+    REM Envoi d'une notification par email
+    python send_alert.py --error-code %errorlevel%
+) else (
+    echo [SUCCES] Automatisation terminée avec succès
+)
+
+REM Log de fin d'exécution
+echo [%date% %time%] Fin de l'automatisation
+echo.
+
+pause
+</code></pre>
+                    </div>
+
+                    <div class="code-section">
+                        <h3>Configuration sécurisée (.env.example)</h3>
+                        <pre><code class="language-shell"># Configuration Satelix Automation Suite
+# Renommer ce fichier en .env et remplir avec vos identifiants
+
+# Identifiants Satelix
+SATELIX_URL=https://votre-satelix.com
+SATELIX_USER=votre_utilisateur
+SATELIX_PASS=votre_mot_de_passe_chiffré
+
+# Configuration Sage 100
+SAGE_DB_PATH=C:\Path\To\Sage\Database
+SAGE_EXPORT_PATH=C:\Path\To\Exports
+
+# Paramètres d'automatisation
+SCHEDULE_TIME=08:00
+RETRY_ATTEMPTS=3
+TIMEOUT_SECONDS=30
+
+# Logs et notifications
+LOG_LEVEL=INFO
+EMAIL_ALERTS=true
+ALERT_EMAIL=admin@entreprise.fr
+</code></pre>
+                    </div>
+                </div>
+
+                <!-- Compétences BTS -->
+                <div class="content-block">
+                    <h2><i class="fas fa-graduation-cap"></i> Compétences BTS SIO Mobilisées</h2>
+
+                    <div class="competences-project">
+                        <div class="comp-category">
+                            <h3>Bloc E4 - Conception et Développement</h3>
+                            <div class="comp-list">
+                                <div class="comp-item">
+                                    <div class="comp-header">
+                                        <span class="comp-code">C1.1</span>
+                                        <span class="comp-name">Analyser un besoin exprimé</span>
+                                        <span class="comp-level level-4">Expert</span>
+                                    </div>
+                                    <p>Analyse approfondie des processus manuels, identification des points d'automatisation, recueil des besoins utilisateurs</p>
+                                </div>
+
+                                <div class="comp-item">
+                                    <div class="comp-header">
+                                        <span class="comp-code">C1.2</span>
+                                        <span class="comp-name">Concevoir une solution applicative</span>
+                                        <span class="comp-level level-3">Maîtrisé</span>
+                                    </div>
+                                    <p>Conception d'architecture modulaire, choix technologiques justifiés (Selenium, Python), design patterns appliqués</p>
+                                </div>
+
+                                <div class="comp-item">
+                                    <div class="comp-header">
+                                        <span class="comp-code">C1.3</span>
+                                        <span class="comp-name">Développer des composants logiciels</span>
+                                        <span class="comp-level level-4">Expert</span>
+                                    </div>
+                                    <p>Développement Python, scripts Batch/Shell, modules réutilisables, gestion des erreurs robuste</p>
+                                </div>
+
+                                <div class="comp-item">
+                                    <div class="comp-header">
+                                        <span class="comp-code">C1.4</span>
+                                        <span class="comp-name">Réaliser des tests et valider</span>
+                                        <span class="comp-level level-3">Maîtrisé</span>
+                                    </div>
+                                    <p>Tests unitaires, tests d'intégration en environnement de production, validation utilisateurs</p>
+                                </div>
+
+                                <div class="comp-item">
+                                    <div class="comp-header">
+                                        <span class="comp-code">C1.5</span>
+                                        <span class="comp-name">Gérer les données</span>
+                                        <span class="comp-level level-3">Maîtrisé</span>
+                                    </div>
+                                    <p>Extraction de données depuis Sage 100, formatage, transformation, stockage sécurisé des configurations</p>
+                                </div>
+
+                                <div class="comp-item">
+                                    <div class="comp-header">
+                                        <span class="comp-code">C1.6</span>
+                                        <span class="comp-name">Déployer une solution applicative</span>
+                                        <span class="comp-level level-4">Expert</span>
+                                    </div>
+                                    <p>Déploiement multi-OS (Windows/Linux), configuration de tâches planifiées, portabilité USB, documentation</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comp-category">
+                            <h3>Bloc E5 - Gestion du Patrimoine Informatique</h3>
+                            <div class="comp-list">
+                                <div class="comp-item">
+                                    <div class="comp-header">
+                                        <span class="comp-code">C2.1</span>
+                                        <span class="comp-name">Gérer le patrimoine informatique</span>
+                                        <span class="comp-level level-4">Expert</span>
+                                    </div>
+                                    <p>Automatisation de la gestion des inventaires, suivi du parc via Satelix, intégration Sage 100</p>
+                                </div>
+
+                                <div class="comp-item">
+                                    <div class="comp-header">
+                                        <span class="comp-code">C2.2</span>
+                                        <span class="comp-name">Répondre aux incidents et demandes</span>
+                                        <span class="comp-level level-3">Maîtrisé</span>
+                                    </div>
+                                    <p>Outils de diagnostic intégrés, résolution automatique des problèmes courants, support aux utilisateurs</p>
+                                </div>
+
+                                <div class="comp-item">
+                                    <div class="comp-header">
+                                        <span class="comp-code">C2.4</span>
+                                        <span class="comp-name">Travailler en mode projet</span>
+                                        <span class="comp-level level-3">Maîtrisé</span>
+                                    </div>
+                                    <p>Gestion de projet complète, utilisation de Git, documentation continue, versioning (v2.0)</p>
+                                </div>
+
+                                <div class="comp-item">
+                                    <div class="comp-header">
+                                        <span class="comp-code">C2.5</span>
+                                        <span class="comp-name">Mettre à disposition des utilisateurs</span>
+                                        <span class="comp-level level-4">Expert</span>
+                                    </div>
+                                    <p>Formation des utilisateurs, documentation complète, support technique, maintenance évolutive</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comp-category">
+                            <h3>Cybersécurité</h3>
+                            <div class="comp-list">
+                                <div class="comp-item">
+                                    <div class="comp-header">
+                                        <span class="comp-code">C3.1</span>
+                                        <span class="comp-name">Protéger les données</span>
+                                        <span class="comp-level level-4">Expert</span>
+                                    </div>
+                                    <p>Chiffrement des identifiants, stockage sécurisé, logs sans données sensibles, communication chiffrée</p>
+                                </div>
+
+                                <div class="comp-item">
+                                    <div class="comp-header">
+                                        <span class="comp-code">C3.3</span>
+                                        <span class="comp-name">Sécuriser les équipements et usages</span>
+                                        <span class="comp-level level-3">Maîtrisé</span>
+                                    </div>
+                                    <p>Exécution sécurisée sur postes et serveurs, isolation des processus, gestion des droits d'accès</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Résultats et Impact -->
+                <div class="content-block">
+                    <h2><i class="fas fa-chart-line"></i> Résultats et Impact</h2>
+
+                    <div class="results-grid">
+                        <div class="result-card">
+                            <div class="result-metric">2-3h</div>
+                            <div class="result-label">économisées par jour</div>
+                            <p>Temps libéré pour l'équipe IT, réallouable à des tâches à plus forte valeur ajoutée</p>
+                        </div>
+
+                        <div class="result-card">
+                            <div class="result-metric">100%</div>
+                            <div class="result-label">automatisation</div>
+                            <p>Aucune intervention manuelle requise après configuration initiale</p>
+                        </div>
+
+                        <div class="result-card">
+                            <div class="result-metric">0</div>
+                            <div class="result-label">erreur depuis déploiement</div>
+                            <p>Fiabilité totale du système avec logs détaillés pour traçabilité</p>
+                        </div>
+
+                        <div class="result-card">
+                            <div class="result-metric">Multi-OS</div>
+                            <div class="result-label">Windows + Linux</div>
+                            <p>Couverture complète du parc informatique de l'entreprise</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial">
+                        <i class="fas fa-quote-left"></i>
+                        <p>
+                            "Cette automatisation a transformé notre quotidien. Ce qui prenait plusieurs heures chaque jour
+                            se fait maintenant automatiquement et sans erreur. L'équipe peut se concentrer sur des missions
+                            plus stratégiques. Un gain de temps et d'efficacité considérable !"
+                        </p>
+                        <span class="testimonial-author">— Responsable IT, Entreprise d'alternance</span>
+                    </div>
+                </div>
+
+                <!-- Conclusion -->
+                <div class="content-block">
+                    <h2><i class="fas fa-check-circle"></i> Conclusion et Apports</h2>
+                    <div class="conclusion-content">
+                        <p>
+                            Le projet <strong>Satelix Automation Suite v2.0</strong> représente une réussite majeure tant
+                            sur le plan technique que sur l'impact opérationnel pour l'entreprise. Il illustre parfaitement
+                            ma capacité à identifier des problématiques métier et à y apporter des solutions techniques
+                            concrètes et efficaces.
+                        </p>
+                        <p>
+                            Ce projet m'a permis de développer des compétences essentielles :
+                        </p>
+                        <ul>
+                            <li><strong>L'automatisation de processus</strong> avec Python et Selenium</li>
+                            <li><strong>La gestion multi-OS</strong> et l'adaptation à différents environnements</li>
+                            <li><strong>La sécurité applicative</strong> avec chiffrement et bonnes pratiques</li>
+                            <li><strong>La conception d'interfaces utilisateur</strong> adaptées aux besoins</li>
+                            <li><strong>Le déploiement et la maintenance</strong> de solutions en production</li>
+                            <li><strong>La documentation technique</strong> et la transmission de connaissances</li>
+                        </ul>
+                        <p>
+                            Au-delà des aspects techniques, ce projet a renforcé mes compétences en <strong>gestion de
+                            projet</strong>, en <strong>communication avec les utilisateurs</strong> et en <strong>
+                            résolution de problèmes complexes</strong>. La satisfaction des utilisateurs et les gains
+                            mesurables obtenus démontrent la valeur ajoutée de cette solution.
+                        </p>
+                        <p>
+                            Le code source est disponible sur GitHub avec une documentation complète, permettant la
+                            maintenance et les évolutions futures. Une version 3.0 est déjà en réflexion pour intégrer
+                            de nouvelles fonctionnalités demandées par les utilisateurs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Portfolio BTS SIO SLAM - Promotion 2026</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
