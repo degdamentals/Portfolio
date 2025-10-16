@@ -4,24 +4,101 @@ document.addEventListener('DOMContentLoaded', () => {
     const navMenu = document.getElementById('navMenu');
     const navLinks = document.querySelectorAll('.nav-link');
 
+    // Fonction pour fermer le menu
+    function closeMenu() {
+        if (navToggle && navToggle.classList.contains('active')) {
+            navToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.classList.remove('menu-open');
+            document.body.style.overflow = '';
+
+            // Vibration de confirmation
+            if ('vibrate' in navigator) {
+                navigator.vibrate(5);
+            }
+        }
+    }
+
     // Toggle mobile menu
     if (navToggle) {
-        navToggle.addEventListener('click', () => {
+        navToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpening = !navToggle.classList.contains('active');
+
             navToggle.classList.toggle('active');
             navMenu.classList.toggle('active');
             document.body.classList.toggle('menu-open');
+
+            // Ajouter un effet vibrant au clic
+            navToggle.style.transform = 'scale(0.9)';
+            setTimeout(() => {
+                navToggle.style.transform = 'scale(1)';
+            }, 100);
+
+            // Feedback haptique (si disponible)
+            if ('vibrate' in navigator && isOpening) {
+                navigator.vibrate(10);
+            }
+
+            // Empêcher le scroll du body quand le menu est ouvert
+            if (isOpening) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
         });
     }
 
     // Close menu when clicking on a link
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (navToggle && navToggle.classList.contains('active')) {
-                navToggle.classList.remove('active');
-                navMenu.classList.remove('active');
-                document.body.classList.remove('menu-open');
+    navLinks.forEach((link, index) => {
+        link.addEventListener('click', (e) => {
+            // Effet de feedback visuel
+            link.style.transform = 'translateX(5px) scale(0.95)';
+            setTimeout(() => {
+                link.style.transform = '';
+            }, 150);
+
+            // Vibration légère
+            if ('vibrate' in navigator) {
+                navigator.vibrate(5);
             }
+
+            closeMenu();
         });
+
+        // Ajouter un effet de ripple au toucher
+        link.addEventListener('touchstart', function(e) {
+            const ripple = document.createElement('span');
+            ripple.classList.add('ripple');
+            this.appendChild(ripple);
+
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.touches[0].clientX - rect.left - size / 2;
+            const y = e.touches[0].clientY - rect.top - size / 2;
+
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = x + 'px';
+            ripple.style.top = y + 'px';
+
+            setTimeout(() => ripple.remove(), 600);
+        }, { passive: true });
+    });
+
+    // Close menu when clicking outside (sur l'overlay)
+    document.addEventListener('click', (e) => {
+        if (navMenu.classList.contains('active') &&
+            !navMenu.contains(e.target) &&
+            !navToggle.contains(e.target)) {
+            closeMenu();
+        }
+    });
+
+    // Close menu on ESC key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeMenu();
+        }
     });
 
     // Active link on scroll
