@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEANNE Arthur - Portfolio BTS SIO SLAM 2026</title>
+
+    <meta name="description" content="Portfolio de JEANNE Arthur, étudiant en BTS SIO SLAM - Promotion 2026. Développeur web en alternance chez Crispin Industrie.">
+    <meta name="keywords" content="BTS SIO, SLAM, portfolio, développement web, Python, JavaScript, alternance, informatique">
+    <meta name="author" content="JEANNE Arthur">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .full-width { grid-column: 1 / -1; }
+
+        .objectives-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .objective {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.7rem;
+            padding: 0.9rem;
+            background: #faf8f4;
+            border-radius: 6px;
+            border: 1px solid var(--glass-border);
+        }
+        .objective i { color: var(--primary-purple); font-size: 0.95rem; margin-top: 0.15rem; flex-shrink: 0; width: 18px; }
+        .objective p { color: var(--text-light); font-size: 0.875rem; line-height: 1.55; margin: 0; }
+
+        /* ===== E5 SYNTHESIS TABLE ===== */
+        .competences-table th { text-align: center; padding: 0.75rem 0.5rem; }
+        .competences-table td { padding: 0.85rem 0.75rem; }
+        .section-row td {
+            background: var(--surface-tint);
+            font-weight: 700;
+            color: var(--primary-purple);
+            text-align: center;
+            padding: 0.6rem 1rem;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .project-cell { font-weight: 600; color: var(--text-white); min-width: 160px; }
+        .project-period { font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-light); display: block; margin-top: 0.25rem; font-weight: 400; }
+        .check-cell { text-align: center; }
+        .check-mark { color: #4f7d6a; font-size: 1.1rem; font-weight: bold; line-height: 1; }
+
+        /* Mobile E5 cards */
+        .e5-mobile-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-card);
+            padding: 1.5rem;
+            margin-bottom: 1.25rem;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+        .e5-mobile-card:hover { border-color: var(--glass-border-strong); transform: translateY(-2px); box-shadow: var(--glass-shadow); }
+        .e5-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem; }
+        .e5-card-category {
+            display: inline-block;
+            padding: 0.3rem 0.7rem;
+            background: var(--primary-purple);
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+            font-size: 0.72rem;
+            color: #faf8f4;
+        }
+        .e5-card-period { font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-light); }
+        .e5-card-title { font-family: var(--font-serif); font-size: 1.05rem; font-weight: 600; color: var(--text-white); margin-bottom: 0.75rem; }
+        .e5-competences-list { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+        .e5-competence-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.3rem 0.6rem;
+            background: #e8f0ec;
+            color: #4f7d6a;
+            border-radius: var(--radius-sm);
+            font-size: 0.75rem;
+            border: 1px solid #d9e6df;
+        }
+
+        /* Project categories */
+        .projects-category { margin-bottom: 3rem; }
+        .category-title {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-white);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid var(--glass-border-strong);
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+        .category-title i { color: var(--primary-purple); font-size: 1rem; }
+        .project-header { margin-bottom: 1.25rem; }
+        .project-header h3 { font-size: 1.25rem; margin-bottom: 0.25rem; }
+        .project-header .project-type { margin-bottom: 0; }
+
+        /* Mobile hide/show for table/cards */
+        @media (max-width: 768px) {
+            .e5-mobile-cards { display: block; }
+            .table-wrapper { display: none; }
+        }
+        @media (min-width: 769px) {
+            .e5-mobile-cards { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Portfolio BTS SIO</div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#accueil" class="nav-link active">
+                    <i class="fas fa-home"></i><span>Accueil</span>
+                </a></li>
+                <li><a href="#presentation" class="nav-link">
+                    <i class="fas fa-user"></i><span>Présentation</span>
+                </a></li>
+                <li><a href="#competences-synthese" class="nav-link">
+                    <i class="fas fa-table"></i><span>Tableau E5</span>
+                </a></li>
+                <li><a href="#projets" class="nav-link">
+                    <i class="fas fa-rocket"></i><span>Projets</span>
+                </a></li>
+                <li><a href="#competences" class="nav-link">
+                    <i class="fas fa-code"></i><span>Compétences</span>
+                </a></li>
+                <li><a href="#veille" class="nav-link">
+                    <i class="fas fa-lightbulb"></i><span>Veille</span>
+                </a></li>
+                <li><a href="#contact" class="nav-link">
+                    <i class="fas fa-envelope"></i><span>Contact</span>
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting">Hello ! Je suis <span style="color: var(--primary-purple-light);">Arthur Jeanne</span></p>
+                <h1 class="hero-title">
+                    Un développeur qui<br>
+                    aime créer des <span class="highlight">solutions</span>
+                </h1>
+                <h2 class="hero-subtitle">Étudiant BTS SIO SLAM — Promotion 2026</h2>
+                <p class="hero-description">
+                    Passionné par le développement web et la cybersécurité, je conçois des applications modernes et sécurisées.
+                    Actuellement en alternance chez Crispin Industrie, je travaille sur des projets full-stack innovants.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projets" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> Voir mes projets
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i> Me contacter
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <figure class="profile-frame">
+                    <img src="photo.jpg" alt="Arthur Jeanne" class="profile-photo">
+                    <figcaption>ESNA · 2024 – 2026</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- Présentation Générale -->
+    <section id="presentation" class="section">
+        <div class="container">
+            <h2 class="section-title">Présentation Générale</h2>
+            <div class="presentation-grid">
+                <div class="presentation-card">
+                    <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Formation</h3>
+                    <h4>BTS SIO Option SLAM</h4>
+                    <p><strong>Établissement :</strong> ESNA</p>
+                    <p><strong>Période :</strong> 2024 – 2026</p>
+                    <p><strong>N° candidat :</strong> 02543646199</p>
+                    <p><strong>Spécialisation :</strong> Solutions Logicielles et Applications Métiers</p>
+                </div>
+
+                <div class="presentation-card">
+                    <div class="card-icon"><i class="fas fa-building"></i></div>
+                    <h3>Alternance</h3>
+                    <h4>Crispin Industrie</h4>
+                    <p><strong>Poste :</strong> Développeur web en alternance</p>
+                    <p><strong>Période :</strong> Septembre 2024 – Juillet 2026</p>
+                    <p><strong>Secteur :</strong> Commerce de gros</p>
+                    <p style="color:var(--text-light);margin-top:0.75rem;line-height:1.7;">
+                        Participation active au développement d'un site e-commerce, création de sites vitrines et automatisation de processus.
+                    </p>
+                </div>
+
+                <div class="presentation-card full-width">
+                    <div class="card-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3>Objectifs de Formation</h3>
+                    <div class="objectives-grid">
+                        <div class="objective">
+                            <i class="fas fa-code"></i>
+                            <p>Maîtriser le développement web et logiciel (Frontend &amp; Backend)</p>
+                        </div>
+                        <div class="objective">
+                            <i class="fas fa-database"></i>
+                            <p>Concevoir et administrer des bases de données relationnelles</p>
+                        </div>
+                        <div class="objective">
+                            <i class="fas fa-shield-alt"></i>
+                            <p>Intégrer les bonnes pratiques de cybersécurité</p>
+                        </div>
+                        <div class="objective">
+                            <i class="fas fa-project-diagram"></i>
+                            <p>Gérer des projets en méthodes agiles (Scrum, Kanban)</p>
+                        </div>
+                        <div class="objective">
+                            <i class="fas fa-cogs"></i>
+                            <p>Automatiser des processus métier et déploiements</p>
+                        </div>
+                        <div class="objective">
+                            <i class="fas fa-users"></i>
+                            <p>Développer des compétences en travail collaboratif</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tableau de Synthèse E5 -->
+    <section id="competences-synthese" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Tableau de Synthèse E5</h2>
+            <p class="section-intro">
+                Mise en correspondance des réalisations professionnelles avec les compétences du référentiel BTS SIO — Épreuve E5
+            </p>
+
+            <!-- Vue desktop : tableau -->
+            <div class="table-wrapper">
+                <table class="competences-table">
+                    <thead>
+                        <tr>
+                            <th style="text-align:left;min-width:170px;">Réalisation professionnelle</th>
+                            <th>Gérer le<br>patrimoine<br>informatique</th>
+                            <th>Répondre aux<br>incidents et<br>demandes</th>
+                            <th>Développer la<br>présence en ligne<br>de l'organisation</th>
+                            <th>Travailler en<br>mode projet</th>
+                            <th>Mettre à<br>disposition des<br>utilisateurs</th>
+                            <th>Organiser son<br>développement<br>professionnel</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Formation -->
+                        <tr class="section-row">
+                            <td colspan="7">Réalisations en cours de formation</td>
+                        </tr>
+                        <tr>
+                            <td class="project-cell">
+                                Site Deg Coaching
+                                <span class="project-period">10/10/2024 — en cours</span>
+                            </td>
+                            <td class="check-cell"></td>
+                            <td class="check-cell"></td>
+                            <td class="check-cell"><span class="check-mark">✓</span></td>
+                            <td class="check-cell"></td>
+                            <td class="check-cell"></td>
+                            <td class="check-cell"><span class="check-mark">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td class="project-cell">
+                                NPM évolution (AI + Python)
+                                <span class="project-period">05/03/2025 — 07/04/2025</span>
+                            </td>
+                            <td class="check-cell"></td>
+                            <td class="check-cell"><span class="check-mark">✓</span></td>
+                            <td class="check-cell"><span class="check-mark">✓</span></td>
+                            <td class="check-cell"><span class="check-mark">✓</span></td>
+                            <td class="check-cell"></td>
+                            <td class="check-cell"><span class="check-mark">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td class="project-cell">
+                                Minesweeper en Java
+                                <span class="project-period">02/01/2025 — 01/03/2025</span>
+                            </td>
+                            <td class="check-cell"></td>
+                            <td class="check-cell"></td>
+                            <td class="check-cell"><span class="check-mark">✓</span></td>
+                            <td class="check-cell"></td>
+                            <td class="check-cell"></td>
+                            <td class="check-cell"></td>
+                        </tr>
+                        <tr>
+                            <td class="project-cell">
+                                Bot Discord Deg Coaching
+                                <span class="project-period">10/10/2024 — en cours</span>
+                            </td>
+                            <td class="check-cell"></td>
+                            <td class="check-cell"><span class="check-mark">✓</span></td>
+                            <td class="check-cell"></td>
+                            <td class="check-cell"><span class="check-mark">✓</span></td>
+                            <td class="check-cell"></td>
+                            <td class="check-cell"><span class="check-mark">✓</span></td>
+                        </tr>
+
+                        <!-- Pro 1ère année -->
+                        <tr class="section-row">
+                            <td colspan="7">Réalisations en milieu professionnel — 1ère année</td>
+                        </tr>
+                        <tr>
+                            <td class="project-cell">
+                                Installation Windows 11 AD
+                                <span class="project-period">09/03/2024 — 02/05/2025</span>
+                            </td>
+                            <td class="check-cell"><span class="check-mark">✓</span></td>
+                            <td class="check-cell"></td>
+                            <td class="check-cell"></td>
+                            <td class="check-cell"><span class="check-mark">✓</span></td>
+                            <td class="check-cell"></td>
+                            <td class="check-cell"></td>
+                        </tr>
+                        <tr>
+                            <td class="project-cell">
+                                AMDI
+                                <span class="project-period">07/03/2024 — 08/06/2025</span>
+                            </td>
+                            <td class="check-cell"></td>
+                            <td class="check-cell"><span class="check-mark">✓</span></td>
+                            <td class="check-cell"></td>
+                            <td class="check-cell"><span class="check-mark">✓</span></td>
+                            <td class="check-cell"></td>
+                            <td class="check-cell"></td>
+                        </tr>
+
+                        <!-- Pro 2ème année -->
+                        <tr class="section-row">
+                            <td colspan="7">Réalisations en milieu professionnel — 2ème année</td>
+                        </tr>
+                        <tr>
+                            <td class="project-cell">
+                                Chat Bot AI Crispin
+                                <span class="project-period">11/10/2025 — 07/06/2026</span>
+                            </td>
+                            <td class="check-cell"></td>
+                            <td class="check-cell"><span class="check-mark">✓</span></td>
+                            <td class="check-cell"><span class="check-mark">✓</span></td>
+                            <td class="check-cell"><span class="check-mark">✓</span></td>
+                            <td class="check-cell"><span class="check-mark">✓</span></td>
+                            <td class="check-cell"></td>
+                        </tr>
+                        <tr>
+                            <td class="project-cell">
+                                Site Baticeram
+                                <span class="project-period">05/07/2025 — 12/06/2026</span>
+                            </td>
+                            <td class="check-cell"></td>
+                            <td class="check-cell"></td>
+                            <td class="check-cell"><span class="check-mark">✓</span></td>
+                            <td class="check-cell"></td>
+                            <td class="check-cell"></td>
+                            <td class="check-cell"></td>
+                        </tr>
+                        <tr>
+                            <td class="project-cell">
+                                Site Crispin Boutique
+                                <span class="project-period">07/10/2025 — en cours</span>
+                            </td>
+                            <td class="check-cell"></td>
+                            <td class="check-cell"></td>
+                            <td class="check-cell"><span class="check-mark">✓</span></td>
+                            <td class="check-cell"><span class="check-mark">✓</span></td>
+                            <td class="check-cell"></td>
+                            <td class="check-cell"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Vue mobile : cartes -->
+            <div class="e5-mobile-cards">
+                <!-- Formation -->
+                <div class="e5-mobile-card">
+                    <div class="e5-card-header">
+                        <span class="e5-card-category">Formation</span>
+                        <span class="e5-card-period">10/10/2024 — en cours</span>
+                    </div>
+                    <div class="e5-card-title">Site Deg Coaching</div>
+                    <div class="e5-competences-list">
+                        <span class="e5-competence-tag"><i class="fas fa-check"></i> Développer la présence en ligne</span>
+                        <span class="e5-competence-tag"><i class="fas fa-check"></i> Organiser son développement pro.</span>
+                    </div>
+                </div>
+                <div class="e5-mobile-card">
+                    <div class="e5-card-header">
+                        <span class="e5-card-category">Formation</span>
+                        <span class="e5-card-period">05/03/2025 — 07/04/2025</span>
+                    </div>
+                    <div class="e5-card-title">NPM évolution (AI + Python)</div>
+                    <div class="e5-competences-list">
+                        <span class="e5-competence-tag"><i class="fas fa-check"></i> Répondre aux incidents</span>
+                        <span class="e5-competence-tag"><i class="fas fa-check"></i> Développer la présence en ligne</span>
+                        <span class="e5-competence-tag"><i class="fas fa-check"></i> Travailler en mode projet</span>
+                        <span class="e5-competence-tag"><i class="fas fa-check"></i> Organiser son développement pro.</span>
+                    </div>
+                </div>
+                <div class="e5-mobile-card">
+                    <div class="e5-card-header">
+                        <span class="e5-card-category">Formation</span>
+                        <span class="e5-card-period">02/01/2025 — 01/03/2025</span>
+                    </div>
+                    <div class="e5-card-title">Minesweeper en Java</div>
+                    <div class="e5-competences-list">
+                        <span class="e5-competence-tag"><i class="fas fa-check"></i> Développer la présence en ligne</span>
+                    </div>
+                </div>
+                <div class="e5-mobile-card">
+                    <div class="e5-card-header">
+                        <span class="e5-card-category">Formation</span>
+                        <span class="e5-card-period">10/10/2024 — en cours</span>
+                    </div>
+                    <div class="e5-card-title">Bot Discord Deg Coaching</div>
+                    <div class="e5-competences-list">
+                        <span class="e5-competence-tag"><i class="fas fa-check"></i> Répondre aux incidents</span>
+                        <span class="e5-competence-tag"><i class="fas fa-check"></i> Travailler en mode projet</span>
+                        <span class="e5-competence-tag"><i class="fas fa-check"></i> Organiser son développement pro.</span>
+                    </div>
+                </div>
+                <!-- Pro 1ère année -->
+                <div class="e5-mobile-card">
+                    <div class="e5-card-header">
+                        <span class="e5-card-category">Pro. 1ère année</span>
+                        <span class="e5-card-period">09/03/2024 — 02/05/2025</span>
+                    </div>
+                    <div class="e5-card-title">Installation Windows 11 AD</div>
+                    <div class="e5-competences-list">
+                        <span class="e5-competence-tag"><i class="fas fa-check"></i> Gérer le patrimoine informatique</span>
+                        <span class="e5-competence-tag"><i class="fas fa-check"></i> Travailler en mode projet</span>
+                    </div>
+                </div>
+                <div class="e5-mobile-card">
+                    <div class="e5-card-header">
+                        <span class="e5-card-category">Pro. 1ère année</span>
+                        <span class="e5-card-period">07/03/2024 — 08/06/2025</span>
+                    </div>
+                    <div class="e5-card-title">AMDI</div>
+                    <div class="e5-competences-list">
+                        <span class="e5-competence-tag"><i class="fas fa-check"></i> Répondre aux incidents</span>
+                        <span class="e5-competence-tag"><i class="fas fa-check"></i> Travailler en mode projet</span>
+                    </div>
+                </div>
+                <!-- Pro 2ème année -->
+                <div class="e5-mobile-card">
+                    <div class="e5-card-header">
+                        <span class="e5-card-category">Pro. 2ème année</span>
+                        <span class="e5-card-period">11/10/2025 — 07/06/2026</span>
+                    </div>
+                    <div class="e5-card-title">Chat Bot AI Crispin</div>
+                    <div class="e5-competences-list">
+                        <span class="e5-competence-tag"><i class="fas fa-check"></i> Répondre aux incidents</span>
+                        <span class="e5-competence-tag"><i class="fas fa-check"></i> Développer la présence en ligne</span>
+                        <span class="e5-competence-tag"><i class="fas fa-check"></i> Travailler en mode projet</span>
+                        <span class="e5-competence-tag"><i class="fas fa-check"></i> Mettre à disposition des utilisateurs</span>
+                    </div>
+                </div>
+                <div class="e5-mobile-card">
+                    <div class="e5-card-header">
+                        <span class="e5-card-category">Pro. 2ème année</span>
+                        <span class="e5-card-period">05/07/2025 — 12/06/2026</span>
+                    </div>
+                    <div class="e5-card-title">Site Baticeram</div>
+                    <div class="e5-competences-list">
+                        <span class="e5-competence-tag"><i class="fas fa-check"></i> Développer la présence en ligne</span>
+                    </div>
+                </div>
+                <div class="e5-mobile-card">
+                    <div class="e5-card-header">
+                        <span class="e5-card-category">Pro. 2ème année</span>
+                        <span class="e5-card-period">07/10/2025 — en cours</span>
+                    </div>
+                    <div class="e5-card-title">Site Crispin Boutique</div>
+                    <div class="e5-competences-list">
+                        <span class="e5-competence-tag"><i class="fas fa-check"></i> Développer la présence en ligne</span>
+                        <span class="e5-competence-tag"><i class="fas fa-check"></i> Travailler en mode projet</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projets Réalisés -->
+    <section id="projets" class="section">
+        <div class="container">
+            <h2 class="section-title">Projets Réalisés</h2>
+            <p class="section-intro">9 réalisations réparties entre formation et milieu professionnel</p>
+
+            <!-- Formation -->
+            <div class="projects-category">
+                <h3 class="category-title">
+                    <i class="fas fa-graduation-cap"></i> Réalisations en cours de formation
+                </h3>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon"><i class="fas fa-globe"></i></div>
+                            <h3>Site Deg Coaching</h3>
+                            <p class="project-type">Site vitrine — en cours</p>
+                        </div>
+                        <p class="project-summary">
+                            Création d'un site vitrine pour Deg Coaching, présentant les services de coaching proposés avec un design moderne et une interface responsive.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML/CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Responsive</span>
+                        </div>
+                        <a href="https://github.com/0670321476/degcoaching" target="_blank" rel="noopener" class="btn-secondary"><i class="fab fa-github"></i> Voir sur GitHub</a>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon"><i class="fas fa-robot"></i></div>
+                            <h3>NPM évolution (AI + Python)</h3>
+                            <p class="project-type">Automatisation — Mars/Avr. 2025</p>
+                        </div>
+                        <p class="project-summary">
+                            Évolution d'un outil NPM intégrant de l'intelligence artificielle et des scripts Python pour automatiser des processus et répondre aux besoins des utilisateurs.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">AI / LLM</span>
+                            <span class="tech-tag">Node.js</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon"><i class="fas fa-gamepad"></i></div>
+                            <h3>Minesweeper en Java</h3>
+                            <p class="project-type">Application desktop — Jan./Mar. 2025</p>
+                        </div>
+                        <p class="project-summary">
+                            Développement du jeu du Démineur en Java avec interface graphique (Swing), gestion de la logique de jeu, des niveaux de difficulté et du chronomètre.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Swing</span>
+                            <span class="tech-tag">POO</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon"><i class="fab fa-discord"></i></div>
+                            <h3>Bot Discord Deg Coaching</h3>
+                            <p class="project-type">Bot Discord — en cours</p>
+                        </div>
+                        <p class="project-summary">
+                            Développement d'un bot Discord pour le serveur Deg Coaching, offrant des commandes de gestion, de modération et d'information pour les membres.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Discord.py</span>
+                            <span class="tech-tag">API</span>
+                        </div>
+                        <a href="https://github.com/degdamentals/Botdiscord" target="_blank" rel="noopener" class="btn-secondary"><i class="fab fa-github"></i> Voir sur GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pro 1ère année -->
+            <div class="projects-category">
+                <h3 class="category-title">
+                    <i class="fas fa-briefcase"></i> Réalisations professionnelles — 1ère année
+                </h3>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon"><i class="fas fa-desktop"></i></div>
+                            <h3>Installation Windows 11 AD</h3>
+                            <p class="project-type">Infra. &amp; déploiement — Mar. 2024</p>
+                        </div>
+                        <p class="project-summary">
+                            Déploiement et configuration de postes Windows 11 intégrés à un Active Directory, mise en place des stratégies de groupe (GPO) et gestion des droits utilisateurs.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Windows 11</span>
+                            <span class="tech-tag">Active Directory</span>
+                            <span class="tech-tag">GPO</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon"><i class="fas fa-tasks"></i></div>
+                            <h3>AMDI</h3>
+                            <p class="project-type">Gestion applicative — Mar. 2024</p>
+                        </div>
+                        <p class="project-summary">
+                            Application de Maintenance et Développement Informatique : gestion des tickets d'incidents, suivi des demandes d'assistance et évolution du parc applicatif.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Ticketing</span>
+                            <span class="tech-tag">Support</span>
+                            <span class="tech-tag">ITIL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pro 2ème année -->
+            <div class="projects-category">
+                <h3 class="category-title">
+                    <i class="fas fa-star"></i> Réalisations professionnelles — 2ème année
+                </h3>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon"><i class="fas fa-comments"></i></div>
+                            <h3>Chat Bot AI Crispin</h3>
+                            <p class="project-type">Chatbot IA — Oct. 2025 / Juin 2026</p>
+                        </div>
+                        <p class="project-summary">
+                            Développement d'un chatbot intégrant de l'IA pour Crispin Industrie, capable de répondre aux questions clients, d'automatiser des réponses et d'améliorer l'expérience utilisateur.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">AI / LLM</span>
+                            <span class="tech-tag">API</span>
+                        </div>
+                        <a href="https://github.com/degdamentals/Crispin" target="_blank" rel="noopener" class="btn-secondary" title="Aperçu de l'architecture — code généré à des fins de documentation"><i class="fab fa-github"></i> Aperçu du projet</a>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon"><i class="fas fa-hard-hat"></i></div>
+                            <h3>Site Baticeram</h3>
+                            <p class="project-type">Site vitrine — Juil. 2025 / Juin 2026</p>
+                        </div>
+                        <p class="project-summary">
+                            Site vitrine professionnel pour une entreprise de chapes liquides et isolation, avec design responsive, animations CSS et formulaire de contact.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML/CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Responsive</span>
+                        </div>
+                        <a href="projet-baticeram.html" class="btn-secondary">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-icon"><i class="fas fa-shopping-cart"></i></div>
+                            <h3>Site Crispin Boutique</h3>
+                            <p class="project-type">E-commerce — en cours</p>
+                        </div>
+                        <p class="project-summary">
+                            Développement du site e-commerce de Crispin Industrie, permettant la présentation et la vente de produits en ligne avec une interface moderne et sécurisée.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">En développement</span>
+                            <span class="tech-tag">E-commerce</span>
+                            <span class="tech-tag">Full Stack</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compétences Techniques -->
+    <section id="competences" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Compétences Techniques</h2>
+
+            <div class="skills-grid">
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-palette"></i> Frontend</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">HTML5 / CSS3</span>
+                            <div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript (ES6+)</span>
+                            <div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Responsive Design</span>
+                            <div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">React (en cours)</span>
+                            <div class="skill-bar"><div class="skill-progress" data-width="60%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-server"></i> Backend</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">PHP</span>
+                            <div class="skill-bar"><div class="skill-progress" data-width="75%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Java</span>
+                            <div class="skill-bar"><div class="skill-progress" data-width="70%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Node.js</span>
+                            <div class="skill-bar"><div class="skill-progress" data-width="70%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-database"></i> Bases de données</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">MySQL / MariaDB</span>
+                            <div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">PostgreSQL</span>
+                            <div class="skill-bar"><div class="skill-progress" data-width="75%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">SQL avancé</span>
+                            <div class="skill-bar"><div class="skill-progress" data-width="80%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Modélisation (MCD/MLD)</span>
+                            <div class="skill-bar"><div class="skill-progress" data-width="80%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-tools"></i> DevOps &amp; Outils</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Git / GitHub</span>
+                            <div class="skill-bar"><div class="skill-progress" data-width="90%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Linux / Bash</span>
+                            <div class="skill-bar"><div class="skill-progress" data-width="75%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Docker</span>
+                            <div class="skill-bar"><div class="skill-progress" data-width="65%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Active Directory</span>
+                            <div class="skill-bar"><div class="skill-progress" data-width="70%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-brain"></i> Intelligence Artificielle</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">API LLM (OpenAI, Anthropic)</span>
+                            <div class="skill-bar"><div class="skill-progress" data-width="80%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Chatbots &amp; automatisation</span>
+                            <div class="skill-bar"><div class="skill-progress" data-width="80%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Discord.py / bots</span>
+                            <div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-tasks"></i> Gestion de projet</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Méthodes Agiles (Scrum)</span>
+                            <div class="skill-bar"><div class="skill-progress" data-width="80%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">UML (Diagrammes)</span>
+                            <div class="skill-bar"><div class="skill-progress" data-width="80%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Documentation technique</span>
+                            <div class="skill-bar"><div class="skill-progress" data-width="85%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Veille Technologique -->
+    <section id="veille" class="section">
+        <div class="container">
+            <h2 class="section-title">Veille Technologique et Sécurité</h2>
+            <p class="section-intro">Suivi régulier des évolutions technologiques et des enjeux de cybersécurité</p>
+
+            <div class="veille-grid">
+                <article class="veille-main">
+                    <div class="veille-header" style="display:flex;gap:1rem;align-items:center;margin-bottom:1.5rem;flex-wrap:wrap;">
+                        <span class="veille-category">Cybersécurité</span>
+                        <span class="veille-date" style="color:var(--text-light);font-size:0.875rem;">Janvier 2025</span>
+                    </div>
+                    <h3 style="color:var(--text-white);margin-bottom:1.5rem;">L'authentification sans mot de passe : enjeux et mise en œuvre</h3>
+
+                    <div class="veille-content" style="color:var(--text-light);line-height:1.8;">
+                        <h4 style="color:var(--text-white);margin-bottom:0.75rem;margin-top:1.5rem;">Contexte et problématique</h4>
+                        <p>
+                            Les mots de passe restent le maillon faible de la sécurité informatique : 81% des violations de données
+                            sont liées à des mots de passe faibles ou volés (rapport Verizon 2024). L'authentification sans mot de
+                            passe (passwordless) émerge comme une alternative prometteuse via les standards WebAuthn et FIDO2.
+                        </p>
+
+                        <h4 style="color:var(--text-white);margin-bottom:0.75rem;margin-top:1.5rem;">Technologies et standards</h4>
+                        <ul style="padding-left:1.5rem;margin-top:0.5rem;">
+                            <li style="margin-bottom:0.5rem;"><strong style="color:var(--text-white);">WebAuthn</strong> : Standard W3C permettant l'authentification par biométrie ou clés de sécurité physiques</li>
+                            <li style="margin-bottom:0.5rem;"><strong style="color:var(--text-white);">FIDO2</strong> : Alliance de protocoles pour une authentification forte sans mot de passe</li>
+                            <li style="margin-bottom:0.5rem;"><strong style="color:var(--text-white);">Passkeys</strong> : Implémentation grand public proposée par Apple, Google et Microsoft</li>
+                        </ul>
+
+                        <h4 style="color:var(--text-white);margin-bottom:0.75rem;margin-top:1.5rem;">Sources et ressources</h4>
+                        <ul class="veille-sources">
+                            <li><a href="https://webauthn.io/" target="_blank" rel="noopener">webauthn.io — Guide et démo</a></li>
+                            <li><a href="https://fidoalliance.org/" target="_blank" rel="noopener">FIDO Alliance — Documentation officielle</a></li>
+                            <li><a href="https://developer.mozilla.org/fr/docs/Web/API/Web_Authentication_API" target="_blank" rel="noopener">MDN — Web Authentication API</a></li>
+                        </ul>
+                    </div>
+                </article>
+
+                <aside class="veille-sidebar">
+                    <h3 style="color:var(--text-white);margin-bottom:1.5rem;">Autres sujets suivis</h3>
+
+                    <div class="veille-card">
+                        <span class="veille-category">IA &amp; Dev</span>
+                        <h4 style="color:var(--text-white);margin:0.75rem 0 0.5rem;">API LLM en production</h4>
+                        <p style="color:var(--text-light);font-size:0.875rem;line-height:1.6;">Intégration de modèles IA (GPT, Claude) dans des applications web — pertinent pour le Bot AI Crispin et NPM évolution.</p>
+                        <span class="veille-date" style="color:var(--text-light);font-size:0.8rem;display:block;margin-top:0.75rem;">Octobre 2025</span>
+                    </div>
+
+                    <div class="veille-card">
+                        <span class="veille-category">DevOps</span>
+                        <h4 style="color:var(--text-white);margin:0.75rem 0 0.5rem;">GitHub Actions avancées</h4>
+                        <p style="color:var(--text-light);font-size:0.875rem;line-height:1.6;">CI/CD optimisée pour le déploiement automatique de sites statiques — appliqué sur Baticeram et Crispin Boutique.</p>
+                        <span class="veille-date" style="color:var(--text-light);font-size:0.8rem;display:block;margin-top:0.75rem;">Novembre 2024</span>
+                    </div>
+
+                    <div class="veille-card">
+                        <span class="veille-category">Cybersécurité</span>
+                        <h4 style="color:var(--text-white);margin:0.75rem 0 0.5rem;">OWASP Top 10 2025</h4>
+                        <p style="color:var(--text-light);font-size:0.875rem;line-height:1.6;">Nouvelles vulnérabilités identifiées, focus sur les API et l'injection de prompts IA.</p>
+                        <span class="veille-date" style="color:var(--text-light);font-size:0.8rem;display:block;margin-top:0.75rem;">Janvier 2025</span>
+                    </div>
+
+                    <div class="veille-card">
+                        <span class="veille-category">Python</span>
+                        <h4 style="color:var(--text-white);margin:0.75rem 0 0.5rem;">Python 3.13 et performances</h4>
+                        <p style="color:var(--text-light);font-size:0.875rem;line-height:1.6;">Nouveautés du compilateur JIT et gains de performance — pertinent pour les scripts d'automatisation.</p>
+                        <span class="veille-date" style="color:var(--text-light);font-size:0.8rem;display:block;margin-top:0.75rem;">Décembre 2024</span>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Contact &amp; Téléchargement</h2>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Informations de contact</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email</strong>
+                            <p><a href="mailto:arthuralternance.pro@gmail.com">arthuralternance.pro@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>Téléphone</strong>
+                            <p><a href="tel:+33633389076">06 33 38 90 76</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <strong>GitHub</strong>
+                            <p><a href="https://github.com/degdamentals" target="_blank" rel="noopener">github.com/degdamentals</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <strong>LinkedIn</strong>
+                            <p><a href="https://www.linkedin.com/in/arthur-jeanne-286560230/" target="_blank" rel="noopener">linkedin.com/in/arthur-jeanne-286560230</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="download-section">
+                    <h3>Télécharger le portfolio</h3>
+                    <p>Version PDF à destination du jury BTS SIO 2026</p>
+                    <button id="downloadPDF" class="btn btn-primary btn-large">
+                        <i class="fas fa-file-pdf"></i> Télécharger en PDF
+                    </button>
+                    <p class="download-note">
+                        Format A4, optimisé pour impression<br>
+                        Inclut tous les projets et compétences
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 JEANNE Arthur — Portfolio BTS SIO SLAM — Promotion 2026</p>
+            <p>N° candidat : 02543646199 — ESNA</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
