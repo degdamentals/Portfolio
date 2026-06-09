@@ -147,46 +147,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// ===== SCROLL ANIMATIONS =====
+// ===== SKILL BARS ANIMATION =====
 const observerOptions = {
     threshold: 0,
     rootMargin: '0px'
 };
 
-const fadeInElements = document.querySelectorAll('.presentation-card, .project-card, .skill-category, .veille-card');
-
-// Only hide elements that start below the visible viewport (avoids flash on elements already in view)
-const elementsToAnimate = [];
-fadeInElements.forEach(element => {
-    if (element.getBoundingClientRect().top > window.innerHeight) {
-        element.style.opacity = '0';
-        element.style.transform = 'translateY(10px)';
-        elementsToAnimate.push(element);
-    }
-});
-
-const fadeInObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        const el = entry.target;
-        // Show when entering viewport OR when scrolled past quickly (fast scroll fix)
-        if (entry.isIntersecting || entry.boundingClientRect.top < 0) {
-            el.style.transition = 'opacity 0.25s ease-out, transform 0.25s ease-out';
-            el.style.opacity = '';
-            el.style.transform = '';
-            fadeInObserver.unobserve(el);
-            // Clean up inline transition after it completes
-            el.addEventListener('transitionend', () => {
-                el.style.transition = '';
-            }, { once: true });
-        }
-    });
-}, observerOptions);
-
-elementsToAnimate.forEach(element => {
-    fadeInObserver.observe(element);
-});
-
-// ===== SKILL BARS ANIMATION =====
 const skillObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
