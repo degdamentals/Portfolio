@@ -940,15 +940,23 @@
                 </div>
 
                 <div class="download-section">
-                    <h3>Télécharger le portfolio</h3>
-                    <p>Version PDF à destination du jury BTS SIO 2026</p>
-                    <button id="downloadPDF" class="btn btn-primary btn-large">
-                        <i class="fas fa-file-pdf"></i> Télécharger en PDF
-                    </button>
-                    <p class="download-note">
-                        Format A4, optimisé pour impression<br>
-                        Inclut tous les projets et compétences
-                    </p>
+                    <h3>Téléchargements</h3>
+                    <div style="display:flex;flex-direction:column;gap:1rem;margin-top:1rem;">
+                        <div>
+                            <a href="cv.pdf" download="CV_Arthur_JEANNE.pdf" class="btn btn-primary btn-large" style="display:inline-flex;align-items:center;gap:0.6rem;text-decoration:none;">
+                                <i class="fas fa-file-pdf"></i> Télécharger mon CV
+                            </a>
+                            <p class="download-note" style="margin-top:0.5rem;">CV — Arthur JEANNE · BTS SIO SLAM 2026</p>
+                        </div>
+                        <div>
+                            <button id="downloadPDF" class="btn btn-secondary btn-large">
+                                <i class="fas fa-file-pdf"></i> Télécharger le portfolio PDF
+                            </button>
+                            <p class="download-note" style="margin-top:0.5rem;">
+                                Format A4, optimisé pour impression
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
